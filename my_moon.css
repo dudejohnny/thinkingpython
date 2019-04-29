@@ -23,7 +23,7 @@ body {
   font-size: 40px;
   font-weight: normal;
   color: rgb(192, 224, 224);
-  text-shadow: 0 0 1px black, 0 0 3px black, 0 0 5px black; }
+  text-shadow: 0 0 2px black, 0 0 5px black, 0 0 15px black; }
 
 ::selection {
   color: #fff;
@@ -39,6 +39,10 @@ body {
 .reveal .slides section > section {
   line-height: 1.3;
   font-weight: inherit; }
+
+html.dimbg .slide-background {
+  filter: blur(3px);
+  background-blend-mode: darken; }
 
 /*********************************************
  * HEADERS

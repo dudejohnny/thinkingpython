@@ -45,35 +45,15 @@
             My Experiment
             background image interview
           -->
-          <section data-transition="fade-in fade-out" data-background="images/interview.png">
+          <section data-transition="fade-in fade-out" data-background="images/engineer.jpg">
           </section>
 
           <section data-transition="fade-in fade-out">
-            <p>42 minutes in Python (TODO graph it)</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-          </section>
-
-          <section data-transition="fade-in fade-out">
-            <p>42 minutes in Python (TODO graph it)</p>
-            <p>~150 minutes in c++ (TODO graph it)</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-          </section>
-
-          <section data-transition="fade-in fade-out">
-            <p>42 minutes in Python (TODO graph it)</p>
-            <p>~150 minutes in c++ (TODO graph it)</p>
-            <p>20 minutes in Python (TODO graph it)</p>
-            <p>&nbsp;</p>
-          </section>
-
-          <section data-transition="fade-in fade-out">
-            <p>42 minutes in Python (TODO graph it)</p>
-            <p>~150 minutes in c++ (TODO graph it)</p>
-            <p>20 minutes in Python (TODO graph it)</p>
-            <p>14 minutes in Python (TODO graph it)</p>
+            <p>Simple known problem with a know solution.</p>
+            <p class="fragment">42 minutes in Python (TODO graph it)</p>
+            <p class="fragment">~150 minutes in c++ (TODO graph it)</p>
+            <p class="fragment">20 minutes in Python (TODO graph it)</p>
+            <p class="fragment">14 minutes in Python (TODO graph it)</p>
           </section>
         </section>
 
@@ -115,7 +95,7 @@
             background image photo of the paper on desk
           -->
         <section>
-          <h2>Empirical Comparison</h2>
+          <h2>Open Source Analysis</h2>
           <section data-transition="fade-in fade-out" data-background="images/20190427_132200.jpg">
             <a href="https://soarsmu.github.io/papers/A_Large_Scale_Study_of_Multiple_Programming_Languages_and_Code_Quality.pdf">
               P.S. Kochhar, D. Wijedasa, D. Lo,
@@ -186,22 +166,94 @@
           Composability and Detail Level
         -->
         <section>
-            <h2>Composability and Detail Level</h2>
+            <h2>Composability</h2>
   
             <!--
             -->
-            <section data-transition="fade-in fade-out">
-              <p>Slide A</p>
-            </section>
-  
-            <!--
-            -->
-            <section data-transition="fade-in fade-out">
-              <p>Slide B</p>
-            </section>
-          </section>
 
-        <!--
+            <section  data-transition="fade-in fade-out" data-background="images/lego.jpg">
+            </section>
+
+            <section  data-transition="fade-in fade-out">
+                <pre><code data-trim>
+def firsts_sorted_by_second(items):
+    return [
+        first for first, second
+        in sorted(items, key = lambda item: item[1])
+    ]
+                </code></pre>
+              </section>
+
+              <section  data-transition="fade-in fade-out">
+                  <pre style="font-size: 30%;"><code data-trim>
+std::vector&lt;int&gt; firsts_sorted_by_second(
+  const std::vector&lt;std::pair&lt;int, int&gt;&gt;& items
+) {
+  std::vector&lt;std::pair&lt;int, int&gt;&gt; temp(items);
+
+  std::sort(
+    temp.begin(),
+    temp.end(), 
+    [](const int& a, const int& b
+  ) -> bool { 
+    return a.second > b.second; 
+  });
+
+  std::vector&lt;int&gt; results;
+  results.reserve(temp.size());
+  std::transform(
+    temp.begin(),
+    temp.end(),
+    std::back_inserter(results),
+    [](auto const& pair){ return pair.first; }
+  );
+
+  return results;
+}
+                  </code></pre>
+                </section>
+      
+
+            <section data-transition="fade-in fade-out">
+              <p>What if you need a proxy for a SQL database.</p>
+            </section>
+  
+            <!--
+            -->
+            <section data-transition="fade-in fade-out">
+              <div>
+                <p style="text-align: left;">In Python you can simply:</p>
+                <ol>
+                  <li>Use an existing framework of a server.</li>
+                  <li>Use the standard db-api.</li>
+                  <li>Serialize the results with pickle.</li>
+                </ol>
+              </div>
+              <div class="fragment">
+                <p style="text-align: left;">Later in the order of your choosing:</p>
+                <ol>
+                  <li>Limit the user to a predefined set of functions.</li>
+                  <li>Type check the input and output.</li>
+                  <li>Switch to any database at any point in time.</li>
+                </ol>
+              </div>
+            </section>
+
+            <section data-transition="fade-in fade-out">
+              <div>
+                <p style="text-align: left;">In c++ you have to:</p>
+                <ol>
+                  <li>Define all input and output data structure in advance</li>
+                  <li>Choose a serializer in advance.</li>
+                  <li>Choose you database in advance.</li>
+                  <li>Choose a framework for the service</li>
+                  <li class="fragment highlight-red">Verify all chosen libraries are composable</li>
+                </ol>
+              </div>
+            </section>
+
+          </section>
+          <!--
           Immediate Reaction
         -->
         <section>
