@@ -257,18 +257,23 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
           Immediate Reaction
         -->
         <section>
-            <h2>Immediate Reaction</h2>
+          <h2>Immediate Reaction</h2>
   
-            <!--
-            -->
-            <section data-transition="fade-in fade-out">
-            <p>Slide A</p>
+          <!--
+          -->
+          <section data-transition="fade-in fade-out" data-background="images/wysiwyg.jpg">
+          </section>
+  
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>Reading code IDE, Writing code - Interactive</p>
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Slide B</p>
+            <p>Like writing a unix command with pipes</p>
           </section>
         </section>
 
@@ -280,34 +285,45 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 
           <!--
           -->
-          <section data-transition="fade-in fade-out">
-            <p>Slide A</p>
+          <section data-transition="fade-in fade-out" data-background="images/repr.jpg">
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Slide B</p>
-          </section>
-        </section>
-
-        <!--
-          Standards
-        -->
-        <section>
-          <h2>Standards</h2>
-
-          <!--
-          -->
-          <section data-transition="fade-in fade-out">
-            <p>Slide A</p>
+            <ol>
+              <li>Python object have a <span style="font-family:courier">__repr__</span> function.</li>
+              <li>Containers representation is composable, and retroactive.</li>
+              <li>It looks the same when you <span style="font-family:courier">print</span> it, log it, hoover over it in your IDE, or debug it with <span style="font-family:courier">pdb</span></li>
+            </ol>
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Slide B</p>
+            <p>This is not true for c++</p>
           </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>A vector have no representaion</p>
+            <p>It looks different in different OS, IDE, debuggers, logs, user defined prints</p>
+            <p>Most of which are not composible.</p>
+          </section>
+
+          <!--
+          <section data-transition="fade-in fade-out">
+              <div>
+                <p style="text-align: left;"></p>
+                <ol>
+                  <li>Python object have a <span style="font-family:courier">__repr__</span> function.</li>
+                  <li>Containers representation is composable, and retroactive.</li>
+                  <li>It looks the same when you <span style="font-family:courier">print</span> it, log it, hoover over it in your IDE, or debug it with <span style="font-family:courier">pdb</span></li>
+                </ol>
+              </div>
+          </section>
+          -->
         </section>
 
         <!--
@@ -315,17 +331,39 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
         -->
         <section>
           <h2>Hypothesis</h2>
-
-          <!--
-          -->
-          <section data-transition="fade-in fade-out">
-            <p>Slide A</p>
+          <section data-transition="fade-in fade-out" data-background="images/hypothesis.jpg">
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Slide B</p>
+            <div style="background-color: white; font-family: 'FontAwesome'; text-shadow: 0 0 0; color: black; text-align: left;">
+              <div style="border: 15px solid white;">
+                <p style="font-size: 100%;">What is Hypothesis?</p>
+                <p style="font-size: 60%;">Hypothesis is a modern implementation of <a href="https://en.wikipedia.org/wiki/QuickCheck">property based testing</a>, designed from the ground up for mainstream languages.</p>
+                <p style="font-size: 60%;">
+                  Hypothesis runs your tests against a much wider range of scenarios than a human tester could, finding edge cases
+                  in your code that you would otherwise have missed. It then turns them into simple and easy to understand failures
+                  that save you time and money compared to fixing them if they slipped through the cracks and a user had run into
+                  them instead.
+                </p>
+                <p style="font-size: 60%;">
+                  Hypothesis currently has <a href="https://github.com/HypothesisWorks/hypothesis-python/">a fully featured open source Python implementation</a>
+                  and <a href="https://github.com/HypothesisWorks/hypothesis-java">a proof of concept Java implementation</a> that we are looking for customers to partner with to turn into a finished project.
+                  Plans for C and C++ support are also in the works.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>
+              Hypothesis currently has <a href="https://github.com/HypothesisWorks/hypothesis-python/">a fully featured open source Python implementation</a>
+               and <a href="https://github.com/HypothesisWorks/hypothesis-java">a proof of concept Java implementation</a> that we are looking for customers to partner with to turn into a finished project.
+              <span class="fragment highlight-red">Plans for C and C++ support are also in the works.</span>
+            </p>
           </section>
         </section>
 
@@ -334,34 +372,52 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
         -->
         <section>
           <h2>Beyond Prototyping</h2>
-
-          <!--
-          -->
-          <section data-transition="fade-in fade-out">
-            <p>So far we got</p>
-            <p>Development x3 faster</p>
-            <p>Writing code the second time is x2 faster</p>
-            <p>And clearer, and of higher quality.</p>
+          <section data-transition="fade-in fade-out" data-background="images/prototyping.jpg">
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Prototyping</p>
-            <p>jetbrains survey hits 26%</p>
+            <h3>What do we get from prototyping?</h3>
+            <ul>
+              <li>First development x3 faster</li>
+              <li>Writing code the second time is x2 faster <br/> and clearer, and of higher quality.</li>
+              <li>Total development is faster and better.</li>
+            </ul>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <h3>How about keeping a reference implementation?</h3>
+            <ul>
+              <li>New feature or enhancement's first development x3 faster</li>
+              <li>Writing code the second time is x2 faster <br/> and clearer, and of higher quality.</li>
+              <li>Total development is faster and better.</li>
+            </ul>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <pre><code style="font-size:120%" data-trim>
+  try:
+      import cPickle as pickle
+  except:
+      import pickle
+            </code></pre>
           </section>
     
-          <!--
-          -->
-          <section data-transition="fade-in fade-out">
-            <p>Reference Implementation</p>
-            <p>import cPickle as pickle</p>
-          </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Why not just use Python for production?</p>
+            <h3>Why not just use Python for production?</h3>
+            <ul>
+              <li class="fragment">Good question</li>
+              <li class="fragment">Reason</li>
+              <li class="fragment">Another reason</li>
+            </ul>
           </section>
         </section>
 
