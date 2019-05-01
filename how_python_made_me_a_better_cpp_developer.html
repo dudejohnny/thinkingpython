@@ -4,7 +4,19 @@
     <meta charset="utf-8">
     <title>How Thinking in Python Made Me a Better c++ Developer - Johnny D.</title>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="my_moon.css">
+    <link rel="stylesheet" href="my_moon.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
   </head>
 
   <body>
@@ -17,8 +29,10 @@
         <section>
           <h2>How <text style="color:#eeaaff;">thinking</text> in Python made me a better c++ developer</h2>
           <div style="text-align:right;">
-            johnny.dude@gmail.com <br/>
-            @johnnydude1219
+            <!-- johnny.dude@gmail.com <br/>
+            @johnnydude1219 -->
+            Johnny D.<br/>
+            May 2019
           </div>
         </section>
 
@@ -30,8 +44,8 @@
           <h2>This talk is about</h2>
           <div>
             <list>
-                <li> A good question </li>
-                <li> I really have no idea </li>
+                <li> Habbits I took from Python community, libraries and tools</li>
+                <li> Python experiance trained me for faster thinking </li>
               </list>
           </div>
         </section>
@@ -49,11 +63,50 @@
           </section>
 
           <section data-transition="fade-in fade-out">
-            <p>Simple known problem with a known solution.</p>
-            <p class="fragment">42 minutes in Python (TODO graph it)</p>
-            <p class="fragment">~150 minutes in c++ (TODO graph it)</p>
-            <p class="fragment">20 minutes in Python (TODO graph it)</p>
-            <p class="fragment">14 minutes in Python (TODO graph it)</p>
+            <p>Known problem with a known solution.</p>
+            <p>Find the shortest path in a text maze.</p>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Language</th>
+                <th>Minutes</th>
+                <th>SLOC</th>
+              </tr>
+              <tr class="fragment">
+                <th>1</th>
+                <th>Python</th>
+                <th>42</th>
+                <th>83</th>
+              </tr>
+              <tr class="fragment">
+                <th>2</th>
+                <th>c++</th>
+                <th>~150</th>
+                <th>115</th>
+              </tr>
+              <tr class="fragment">
+                  <th>3</th>
+                <th>Python</th>
+                <th>20</th>
+                <th>65</th>
+              </tr>
+              <tr class="fragment">
+                  <th>4</th>
+                <th>Python</th>
+                <th>14</th>
+                <th>62</th>
+              </tr>
+              <tr class="fragment">
+                  <th>~10</th>
+                <th>c++</th>
+                <th>~30</th>
+                <th>67</th>
+              </tr>
+            </table>
+
           </section>
         </section>
 
@@ -65,7 +118,7 @@
           <h2>Empirical Comparison</h2>
           
           <section data-transition="fade-in fade-out" data-background="images/20190427_132301.jpg">
-            <a href="https://page.mi.fu-berlin.de/prechelt/Biblio/jccpprtTR.pdf" style="text-shadow: 0 0 3px black, 0 0 5px black, 0 0 10px black, 0 0 25px black;">
+            <a href="https://page.mi.fu-berlin.de/prechelt/Biblio/jccpprtTR.pdf" style="color:white; text-shadow: 0 0 3px black, 0 0 5px black, 0 0 10px black, 0 0 25px black;">
               Prechelt, “An empirical comparison of c, c++, java, perl, python, rexx, and tcl for a search/string-processing program” 2000.
             </a>
           </section>
@@ -97,25 +150,27 @@
         <section>
           <h2>Open Source Analysis</h2>
           <section data-transition="fade-in fade-out" data-background="images/20190427_132200.jpg">
-            <a href="https://soarsmu.github.io/papers/A_Large_Scale_Study_of_Multiple_Programming_Languages_and_Code_Quality.pdf">
-              P.S. Kochhar, D. Wijedasa, D. Lo,
-             "A large scale study of multiple programming languages and code quality",
-             Proc. of the 23rd International Conference on Software Analysis Evolution and Reengineering (SANER),
-             vol. 1, pp. 563-573, March 2016.
+            <a href="https://web.cs.ucdavis.edu/~filkov/papers/lang_github.pdf" style="color:white; text-shadow: 0 0 3px black, 0 0 5px black, 0 0 10px black, 0 0 25px black;">
+              A Large Scale Study of Programming Languages and Code Quality in Github<br/>
+              <span style="font-size: 80%">
+                Baishakhi Ray, Daryl Posnett, Vladimir Filkov, Premkumar Devanbu<br/>
+                Department of Computer Science, University of California, Davis, CA, 95616, USA
+              </span>
             </a>
           </section>
 
           <section data-transition="fade-in fade-out">
-              <img src="images/table.png">
+              <img src="images/langs.jpg">
           </section>
           
           <section data-transition="fade-in fade-out">
             <table>
-              <tr><th>Language</th><th>Bugs</th><th>SLOC / Commit</th></tr>
-              <tr><th>c++</th><th>39.6%</th><th>880</th></tr>
-              <tr><th>c</th><th>33.2%</th><th>294</th></tr>
-              <tr><th>Python</th><th>29.8%</th><th>188</th></tr>
-              <tr><th>Clojure</th><th>16.8%</th><th>135</th></tr>
+              <tr><th>Language</th><th>Commits / Bugs</th><th>SLOC / Commit</th></tr>
+              <tr><th>c++</th><th>40%</th><th>233</th></tr>
+              <tr><th>Java</th><th>40%</th><th>219</th></tr>
+              <tr><th>c</th><th>40%</th><th>168</th></tr>
+              <tr><th>Python</th><th>36%</th><th>79</th></tr>
+              <tr><th>Clojure</th><th>21%</th><th>51</th></tr>
             </table>
           </section>
 
@@ -125,10 +180,10 @@
           Python vs c++
         -->
         <section>
-          <h2>
+          <h3>
             (compared to <text style="color:#eeaaff;">c++</text>)<br/>
-            <text style="color:#eeaaff;">Python</text> is
-          </h2>
+            <text style="color:#eeaaff;">Python</text> development can be faster because of
+          </h3>
           <table style="font-size: 50%">
             <th>
               <ul>
@@ -175,17 +230,17 @@
             </section>
 
             <section  data-transition="fade-in fade-out">
-                <pre><code data-trim>
-def firsts_sorted_by_second(items):
+                <pre><code class="hljs" data-trim contenteditable>
+def firsts_sorted_by_second(pairs):
     return [
-        first for first, second
-        in sorted(items, key = lambda item: item[1])
+        x for x, y
+        in sorted(pairs, key = lambda pair: pair[1])
     ]
                 </code></pre>
               </section>
 
               <section  data-transition="fade-in fade-out">
-                  <pre style="font-size: 30%;"><code data-trim>
+                  <pre style="font-size: 30%;"><code class="hljs" data-trim contenteditable>
 std::vector&lt;int&gt; firsts_sorted_by_second(
   const std::vector&lt;std::pair&lt;int, int&gt;&gt;& items
 ) {
@@ -210,9 +265,26 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 
   return results;
 }
-                  </code></pre>
-                </section>
-      
+              </code></pre>
+            </section>
+
+            <section  data-transition="fade-in fade-out">
+                <pre style="font-size: 50%;"><code class="hljs" data-trim contenteditable>
+auto temp = magic_sort([](const int& a, const int& b
+) -> bool { 
+  return a.second > b.second; 
+});
+
+std::vector&lt;int&gt; results;
+results.reserve(temp.size());
+std::transform(
+  temp.begin(),
+  temp.end(),
+  std::back_inserter(results),
+  [](auto const& pair){ return pair.first; }
+);
+            </code></pre>
+          </section>
 
             <section data-transition="fade-in fade-out">
               <p>What if you need a proxy for a SQL database.</p>
@@ -244,11 +316,23 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
                 <p style="text-align: left;">In c++ you have to:</p>
                 <ol>
                   <li>Define all input and output data structure in advance</li>
-                  <li>Choose a serializer in advance.</li>
-                  <li>Choose your database in advance.</li>
+                  <li>Choose a serializer in advance</li>
+                  <li>Choose your database in advance</li>
                   <li>Choose a framework for the service</li>
                   <li class="fragment highlight-red">Verify all chosen libraries are composable</li>
                 </ol>
+              </div>
+            </section>
+
+            <section data-transition="fade-in fade-out">
+              <div>
+                <p>What can you do?</p>
+                <ol class="fragment">
+                  <li>Forget about performance and use json</li>
+                  <li>Fake, Mock, Stub</li>
+                  <li>Use the fastest thing available, accpeting it will be re-written later</li>
+                </ol>
+                <p class="fragment">All of those will get you <br/> from design to any point <b>faster</b>.</p>
               </div>
             </section>
 
@@ -267,13 +351,68 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Reading code IDE, Writing code - Interactive</p>
+            <p>I have been using IDLE since 2004/5.</p>
+            <p>Later on Jupyter notebook came.</p>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <img src="images/jupyter1.png">
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <img src="images/jupyter2.png">
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p>Bugs consume less time and efforts when found earlier</p> 
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p>Just like composing a shell command<br/>finding the largest folders in your home for example</p>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>
+  johnny:/$ du -a home | head -n 5
+  4	home/johnny/Public
+  4	home/johnny/github/black/CONTRIBUTING.md
+  1096	home/johnny/github/black/profiling/dict_huge.py
+  212	home/johnny/github/black/profiling/dict_big.py
+  180	home/johnny/github/black/profiling/mix_big.py
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p>Just like composing a shell command<br/>finding the largest folders in your home for example</p>
+            <pre><code class="hljs" data-trim contenteditable>
+  johnny:/$ du -a home | sort -n | head -n 5
+  0	home/johnny/.config/Code/Cookies-journal
+  0	home/johnny/.config/Code/logs/extensions.log
+  0	home/johnny/.config/Code/logs/tasks.log
+  0	home/johnny/.config/Code/logs/2renderer1.log
+  0	home/johnny/.config/Code/logs/output_1
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p>Just like composing a shell command<br/>finding the largest folders in your home for example</p>
+            <pre><code class="hljs" data-trim contenteditable>
+  johnny:/$ du -a home | sort -n -r | head -n 5
+  2567740	home
+  2567736	home/johnny
+  1263636	home/johnny/github
+  622536	home/johnny/.cache
+  601592	home/johnny/github/cpython
+            </code></pre>
           </section>
 
           <!--
           -->
           <section data-transition="fade-in fade-out">
-            <p>Like writing a unix command with pipes</p>
+            <p>Can we do this in c++ ?</p>
+            <p class="fragment">Can we do this with production code ?</p>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p>Write little code, execute it often</p>
+            <p>Read code using a modern IDE</p>
           </section>
         </section>
 
@@ -292,9 +431,9 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
           -->
           <section data-transition="fade-in fade-out">
             <ol>
-              <li>Python object have a <span style="font-family:courier">__repr__</span> function.</li>
+              <li>Python object have a standard representation.</li>
               <li>Containers representation is composable, and retroactive.</li>
-              <li>It looks the same when you <span style="font-family:courier">print</span> it, log it, hoover over it in your IDE, or debug it with <span style="font-family:courier">pdb</span></li>
+              <li>It looks the same when you print it, log it, hoover over it in your IDE, or debug it with pdb</li>
             </ol>
           </section>
 
@@ -310,6 +449,35 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
             <p>A vector has no representaion</p>
             <p>It looks different in different OS, IDE, debuggers, logs, user defined prints</p>
             <p>Most of which are not composible.</p>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>But it can be true in your project if you want to</p>
+            <pre><code class="hljs" data-trim contenteditable>
+stream& stream::operator<<(
+  const AnyTypeGoesInHere& your_object
+);
+            </code></pre>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>Back to Python</p>
+            <pre><code class="hljs" data-trim contenteditable>
+  &gt;&gt;&gt; print(my_list)
+  &lt;__main__.MyList object at 0x7fa859480b38&gt;
+            </code></pre>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>
+  &gt;&gt;&gt; print(my_list)
+  [1, 2, 3, 4]
+            </code></pre>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>
+  &gt;&gt;&gt; print(my_list)
+  MyList([1, 2, 3, 4])
+            </code></pre>
           </section>
 
           <!--
@@ -407,7 +575,6 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
       import pickle
             </code></pre>
           </section>
-    
 
           <!--
           -->
@@ -415,8 +582,8 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
             <h3>Why not just use Python for production?</h3>
             <ul>
               <li class="fragment">Good question</li>
-              <li class="fragment">Reason</li>
-              <li class="fragment">Another reason</li>
+              <li class="fragment">Implementing an algorithm?<br/>Python will execute slower</li>
+              <li class="fragment">Do you need limited parallelism?<br/>Python is single threaded</li>
             </ul>
           </section>
         </section>
@@ -436,26 +603,212 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
             <!--
             -->
             <section data-transition="fade-in fade-out">
-              <img src="images/youtube.A.png">
+              <img src="images/youtube1.jpg" width="75%">
             </section>
       
             <!--
             -->
             <section data-transition="fade-in fade-out">
-                <img src="images/youtube.kYxLdctzyjE.jpg">
+                <img src="images/youtube2.jpg" width="75%">
             </section>
   
             <!--
             -->
             <section data-transition="fade-in fade-out">
-              <p>More examples</p>
+              <p>If you cannot say it<br/>You cannot think it</p>
             </section>
+  
+            <!--
+            -->
+            <section data-transition="fade-in fade-out">
+              <p>If you <b>can</b> say it<br/>You cannot <b>unthink</b> it</p>
+            </section>
+  
+            <!--
+            -->
+            <section data-transition="fade-in fade-out" data-background="images/pink.jpg">
+              <p>If you <b>can</b> say it<br/>You cannot <b>unthink</b> it</p>
+            </section>
+
+            <section data-transition="fade-in fade-out">
+              <h3>Miller's Law</h3>
+              <p>The number of objects an average human<br/> can hold in short-term memory is 7 ± 2.</p>
+            </section>
+
+            <section data-transition="fade-in fade-out">
+              <p>Imagine a language that does <br/> memory managment for you</p>
+            </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+              <pre><code style="font-size:120%" data-trim>
+  &gt;&gt;&gt; a = MyInt()
+  A new object MyInt(0)
+  &gt;&gt;&gt; b = a
+  &gt;&gt;&gt; b.value = 5
+  Setting value to 5
+  &gt;&gt;&gt; print(a.value)
+  5
+  &gt;&gt;&gt; del a
+  &gt;&gt;&gt; del b
+  Deleting MyInt(5)
+              </code></pre>
+            </section>
+  
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+              <pre><code style="font-size:100%" data-trim>
+  auto a = make_shared&lt;int&gt;(0); // Creates an object
+  auto b = a;                   // Another variable refers to it.
+  *b = 5;                       // Set the underline object's value
+  cout << *a;                   // Get it via the original referrer
+  a.reset();                    // 'a' will not refer to it anymore
+  b.reset();                    // 'b' will not refer to it anymore
+  // the object will be deleted now
+            </code></pre>
           </section>
-    
-        </div>
+  
+          <section data-transition="fade-in fade-out">
+            <p>What if we use just shared pointers?</p>
+            <p>Will c++ be as simple as Python?</p>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p><i>"Simple is better complex"</i></p>
+          </section>
+  
+          <section data-transition="fade-in fade-out">
+            <div>
+              <pre><code style="font-size:100%">
+  def __init__(self, soemthing):
+      self.something = something
+              </code></pre>
+              <pre class="fragment"><code style="font-size:100%">
+  void Object::Object(unique_ptr&lt;Type&gt;&& something)
+  : something(move(something))
+  {}
+              </code></pre>
+            </div>
+          </section>
+  
+          <section data-transition="fade-in fade-out">
+            <img src="images/emcpp.jpg">
+          </section>
+  
+          <section data-transition="fade-in fade-out">
+            <div>
+              <p>what if you want a custom print or log for that unique pointer?</p>
+              <pre class="fragment"><code style="font-size:100%">
+  const int *
+  int * const
+              </code></pre>
+              <pre class="fragment"><code style="font-size:100%">  int const * </code></pre>
+            </div>
+          </section>
+          <section data-transition="fade-in fade-out">
+            <h3>NL.26: Use conventional const notation</h3>
+            <p><b>Reason</b> <br/> Conventional notation is <br/> more familiar to more programmers. <br/> Consistency in large code bases.</p>
+            <pre><code style="font-size:80%" data-trim>
+  const int x = 7;    // OK
+  int const y = 9;    // bad
+
+  const int *const p = nullptr; // OK, constant pointer to constant int
+  int const *const p = nullptr; // bad, constant pointer to constant int
+            </code></pre>
+          </section>
+
+          <section data-transition="fade-in fade-out">
+            <p><i>"Complex is better complicated"</i></p>
+          </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out" data-background="images/pink.jpg">
+            <ul>
+              <li class="fragment">What if they used (a different option)...</li>
+              <li class="fragment">What if I use (a different option)...</li>
+              <li class="fragment">This is not a good c++ code, what if a new member git blame and see my name</li>
+              <li class="fragment">Can this possibly cause a performance problem?</li>
+            </ul>
+         </section>
+
+         <section data-transition="fade-in fade-out">
+            <p>It is not about pointers</p>
+            <p>Just tell someone <br/>
+               you are using a map and they will think: <br/>
+               Why not unordered_map, or hash_table,<br/>
+               and should it be dense or sparse?
+            </p>
+         </section>
+
+          <!--
+          -->
+          <section data-transition="fade-in fade-out">
+            <p>7 ± 2</p>
+            <ol class="fragment">
+              <li>What type of pointer?</li>
+              <li>Which data structure of the type I need?</li>
+              <li>Is it composable?</li>
+              <li>Is this database the right choice?</li>
+              <li>Is this serializer the right choice?</li>
+              <li>There is a problem with something I wrote 10 minutes ago, what is going on there?</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <h2><text style="color:#eeaaff;">Summary</h2>
+          <ol class="fragment">
+            <li>Write less lines of code (even in c++)</li>
+            <li>Forget about composability and performance, and<br/>accept the need to rewrite your code</li>
+            <li>Execute your partial code often</li>
+            <li>Consider your objects representation.<br/>
+                Helps team communication over data structures.</li>
+            <li>Prototype, or keep a Reference Implementation.</li>
+            <li>Use a simple choiceless vocabulary.<br/>
+                (Like: mapping)</li>
+          </ol>
+        </section>    
+
+        <section>
+          <p>You simply cannot compete with your same self</p>
+          <h2><text style="color:#eeaaff;">Thinking</text> in Python</h2>
+        </section>    
+
+        <section>
+          <h2>Thank You</h2>
+        </section>    
+
+      </div>
     </div>
 
+    <script src="reveal.js/lib/js/head.min.js"></script>
     <script src="reveal.js/js/reveal.js"></script>
-    <script> Reveal.initialize(); </script>
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/search/search.js', async: true },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
   </body>
 </html>
