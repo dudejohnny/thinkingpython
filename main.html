@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How Thinking in Python Made Me a Better c++ Developer - Johnny D.</title>
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/kimbie.light.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+<!-- This is the actual body, 
+     so the heck with keeping the previous indentation!
+     This part is reindented from 0! 
+-->
+
+<section>
+  <h1>How Thinking in Python Made Me a Better c++ Developer</h1>
+  <p>EuroPython 2019<br/>
+     Johnny Dude</p>
+</section>
+<section>
+  <h2>About Me</h2>
+  <section>
+    <p>
+      At work, I usually develop in c++<br/>
+      I love the Python progamming language<br/>
+      Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a><br/>
+      <a herf="https://twitter.com/dudejohnny1219">@dudejohnny1219</a><br/>
+    </p>
+  </section>
+</section>
+  
+<section>
+  <h2>Outline</h2>
+  <section style="font-size: 150%">
+    <p class="fragment grow">I - What is the problem?</p>
+    <p>II - Thinking Limitations</p>
+    <p>III - Some Examples</p>
+  </section>
+</section>
+
+<section>
+  <h2>The Shortest Path Problem</h2>
+  <section style="font-size: 125%">
+      <p class="fragment">
+      Given an input text file of a maze,<br/>
+      Produce an output text file of the shortest<br/>
+      path from a start point to an end point.
+    </p>
+  </section>
+</section>
+
+<section style="font-size: 150%">
+  <p>
+    Implementing a solution for a<br/>
+    problem takes less time the second<br/>
+    time you implement it.
+  </p>
+</section>
+
+<section>
+  <section style="font-size: 100%">
+    <p>
+      First try / Python, 42 minutes<br/>
+      Second try / c++, ~150 minutes<br/>
+    </p>
+  </section>
+
+  <section style="font-size: 100%">
+    <p>
+      First try / Python, 42 minutes<br/>
+      Second try / c++, ~150 minutes<br/>
+      Third try / Python, 22 minutes<br/>
+      Fourth try / Python, 14 minutes<br/>
+      Fifth try / c++, 30 minutes<br/>
+    </p>
+  </section>
+
+  <section style="font-size: 150%">
+    <h3>Python vs c++</h3>
+    <div>
+      <table width=100%>
+        <tr>
+          <td>
+            Per Task
+            <li>4 times faster</li>
+            <li>Less SLOC</li>
+            <li>Less Bugs</li>
+          </td>
+          <td>
+            Per Commit
+            <li>Less SLOC</li>
+            <li>Less Bugs</li>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="font-size: 50%">
+      <a herf=""><em>Add References</em></a><br/>
+      <a herf=""><em>Add References</em></a>
+    </div>
+  </section>
+
+  <section style="font-size: 100%">
+    <p>
+      First try / Python, 42 minutes, XX SLOC<br/>
+      Second try / c++, ~150 minutes, XX SLOC<br/>
+      Third try / Python, 22 minutes, XX SLOC<br/>
+      Fourth try / Python, 14 minutes, XX SLOC<br/>
+      Fifth try / c++, 30 minutes, XX SLOC<br/>
+    </p>
+    <p style="font-size: 50%">
+      <em>* SLOC excluding: comments lines, empty lines, bracelets only lines.</em>
+    </p>
+  </section>
+
+  <section style="font-size: 150%">
+    <h3>Human Reader Comparison</h3>
+    <div>
+      4<sup style="font-size: 50%">th</sup> vs 5<sup style="font-size: 50%">th</sup> implementations.
+      <li>Same Algorithm</li>
+      <li>Same Data Structure</li>
+      <li>Same Functions</li>
+      <li>Same Variable Names</li>
+    </div>
+  </section>
+
+  <section>
+    <h1>Why?</h1>
+  </section>
+  <section style="font-size: 250%">
+    <p>
+      What was I<br/>
+      <em>thinking</em> about?
+    </p>
+  </section>
+
+</section>
+
+<section>
+  <h2>Outline</h2>
+  <section style="font-size: 150%">
+    <p>I - What was I <em>thinking</em> about?</p>
+    <p class="fragment grow">II - Thinking Limitations</p>
+    <p>III - Some Examples</p>
+  </section>
+</section>
+
+<section>
+  <section style="font-size: 150%">
+    <h2>Miller's Law</h2>
+    <p>&nbsp;</p>
+    <p>
+      The number of objects an<br/>
+      average human can hold in<br/>
+      working memory is <b>7 ± 2</b>
+    </p>
+    <div style="font-size: 50%">
+      <a herf=""><em>Add References</em></a>
+    </div>
+  </section>
+  <section style="font-size: 150%">
+    <p>
+      Anything the occupies your<br/>
+      working memory reduces your<br/>
+      ability to <em>think</em>.
+    </p>
+  </section>
+</section>
+
+<section>
+  <section style="font-size: 125%">
+    <h2>Priming Effect</h2>
+    <p>&nbsp;</p>
+    <p>
+      Priming is a technique whereby<br/>
+      exposure to one stimulus influences a<br/>
+      response to a subsequent stimulus,<br/>
+      without conscious guidance<br/>
+      or intention.
+    </p>
+    <div style="font-size: 50%">
+      <a herf=""><em>Add References</em></a>
+    </div>
+  </section>
+  <section>
+    <h1>Capital of France</h1>
+  </section>
+  <section style="font-size: 150%">
+    <p>picture of the eiffel tower</p>
+  </section>
+  <section style="font-size: 150%">
+    <p>
+      You did not will it,<br/>
+      and you <em>can not</em> stop it.
+    </p>
+  </section>
+</section>
+  
+<section>
+  <section style="font-size: 125%">
+    <h2>Context Switching</h2>
+  </section>
+  <section>
+    <table width=90%>
+      <tr>
+        <td>
+          <list>
+            <li>Read Documents</li>
+            <li>Implement</li>
+            <li>Debug</li>
+          </list>
+          <list class="fragment">
+            <li>Read Documents 2</li>
+            <li>Implement 2</li>
+            <li>Debug 2</li>
+          </list>
+        </td>
+        <td>
+          <list class="fragment">
+            <li>Read Documents</li>
+            <li>Read Documents 2</li>
+            <li>Implement</li>
+            <li>Implement 2</li>
+            <li>Debug</li>
+            <li>Debug 2</li>
+          </list>
+        </td>
+      </tr>
+    </table>
+    <div style="font-size: 50%">
+      <a herf=""><em>Add References</em></a>
+    </div>
+  </section>
+  <section style="font-size: 150%">
+    <p>
+      Regardless to task types,<br/>
+      and the quantety of the costs.<br/>
+      Task switching reduces your</br>
+      ability to <em>think</em>.
+    </p>
+  </section>
+</section>
+
+
+<section>
+  <h2>Outline</h2>
+  <section style="font-size: 150%">
+    <p>I - What was I <em>thinking</em> about?</p>
+    <p>II - Thinking Limitations</p>
+    <p class="fragment grow">III - Some Examples</p>
+  </section>
+</section>
+
+<section>
+  <h1>Thank You</h1>
+</section>    
+
+<section>
+  <section>
+    <pre><code class="hljs">
+  def get_biggest_files(n, path='.'):
+      lines = system(f'du -a {path}').splitlines()
+      pairs = [line.split('\t') for line in lines]
+      return [name for size, name in nlargest(n, paires)]
+      </code></pre>
+  </section>
+
+  <section> <!-- data-trim contenteditable-->
+    <pre><code class="hljs">
+  &gt;&gt;&gt; n, path = 2, 'small folder'
+  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
+  &gt;&gt;&gt; lines[:2]
+  ['8\t./darker.css', '32\t./index.html']
+  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
+  &gt;&gt;&gt; pairs[:2]
+  [['8', './darker.css'], ['32', './index.html']]
+  &gt;&gt;&gt; nlargest(n, pairs)
+  [['96', './.git/objects/d1/31af6800b725b05b...'],
+   ['912', './images/repr.jpg'],
+   ['900', './.git/objects/20']]
+  &gt;&gt;&gt; [name for size, name in nlargest(n, pairs)]
+      </code></pre>
+  </section>
+
+  <section>
+    <h1>Immediate Reaction</h1>
+    <li class="fragment">Reduce amount of context switching</li>
+    <li class="fragment"></li>
+    <li class="fragment"></li>
+    <li class="fragment"></li>
+    <li class="fragment"></li>
+  </section>
+</section>
+
+<!--
+  So far for the slides part,
+  back to original document indentation. 
+-->
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/search/search.js', async: true },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+  </body>
+</html>
