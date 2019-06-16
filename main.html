@@ -27,52 +27,88 @@
      This part is reindented from 0! 
 -->
 
+
+<!-- ------------ --
+  -- Introduction --
+  -- ------------ -->
 <section>
-  <h1>How Thinking in Python Made Me a Better c++ Developer</h1>
-  <p>EuroPython 2019<br/>
-     Johnny Dude</p>
-</section>
-<section>
-  <h2>About Me</h2>
+
+  <!-- Intoduction - Title -->
   <section>
-    <p>
-      At work, I usually develop in c++<br/>
-      I love the Python progamming language<br/>
-      Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a><br/>
-      <a herf="https://twitter.com/dudejohnny1219">@dudejohnny1219</a><br/>
-    </p>
+    <h1>How Thinking in Python Made Me a Better c++ Developer</h1>
+    <p>EuroPython 2019<br/>
+        Johnny Dude</p>
+    <aside class="notes">
+      Thank you all for coming.<br/>
+      I want to start by thanking the organizers of EuroPython. This is actually my first EuroPython, it has been awesome so far, I hope you are all enjoying it too.
+    </aside>
+  </section>
+
+  <!-- Intoduction - About Me -->
+  <section>
+    <table width=100%>
+      <tr>
+        <td width=25%>
+          <img class="plain" src="johnny_round.png"></img>
+        </td>
+        <td width=75%>
+          <div style="text-align: center">
+            <a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/>
+            Principal Engineer @ <a herf="https://www.toganetworks.com">TogaNetworks</a><br/>
+            Do <strong>not</strong> write production Python code<br/>
+            This is my first EuroPython talk<br/>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Intoduction - Outline -->
+  <section>
+    <div  style="font-size: 150%">
+      <p>Part I - What is the problem?</p>
+      <p>Part II - Thinking Limitations</p>
+      <p>Part III - Actual Examples</p>
+    </div>
   </section>
 </section>
-  
+
+
+<!-- ------ --
+  -- Part I --
+  -- ------ -->
 <section>
-  <h2>Outline</h2>
+  <h1>
+    Part I<br/>
+    What is the Problem?
+  </h1>
+</section>
+
+<section>
+  <!-- Part I - shortest path title -->
+  <section>
+    <h2>The Shortest Path Problem</h2>
+  </section>
+
+  <!-- Part I - shortest path details -->
+  <section>
+    <div style="font-size: 150%">
+      Reads a text input file maze<br/>
+      and write the shortest path solution<br/>
+      to an output text file
+    </div>
+  </section>
+
+  <!-- Part I - impl is faster the second time -->
   <section style="font-size: 150%">
-    <p class="fragment grow">I - What is the problem?</p>
-    <p>II - Thinking Limitations</p>
-    <p>III - Some Examples</p>
-  </section>
-</section>
-
-<section>
-  <h2>The Shortest Path Problem</h2>
-  <section style="font-size: 125%">
-      <p class="fragment">
-      Given an input text file of a maze,<br/>
-      Produce an output text file of the shortest<br/>
-      path from a start point to an end point.
+    <p>
+      Implementing a solution for a<br/>
+      problem takes less time the second<br/>
+      time you implement it.
     </p>
   </section>
-</section>
 
-<section style="font-size: 150%">
-  <p>
-    Implementing a solution for a<br/>
-    problem takes less time the second<br/>
-    time you implement it.
-  </p>
-</section>
-
-<section>
+  <!-- Part I - my experiment result 1 -->
   <section style="font-size: 100%">
     <p>
       First try / Python, 42 minutes<br/>
@@ -80,6 +116,7 @@
     </p>
   </section>
 
+  <!-- Part I - my experiment result 2 -->
   <section style="font-size: 100%">
     <p>
       First try / Python, 42 minutes<br/>
@@ -90,6 +127,7 @@
     </p>
   </section>
 
+  <!-- Part I - article results -->
   <section style="font-size: 150%">
     <h3>Python vs c++</h3>
     <div>
@@ -115,6 +153,7 @@
     </div>
   </section>
 
+  <!-- Part I - my experiment results 3 -->
   <section style="font-size: 100%">
     <p>
       First try / Python, 42 minutes, XX SLOC<br/>
@@ -128,6 +167,7 @@
     </p>
   </section>
 
+  <!-- Part I - my experiment results 4-->
   <section style="font-size: 150%">
     <h3>Human Reader Comparison</h3>
     <div>
@@ -139,31 +179,39 @@
     </div>
   </section>
 
+  <!-- Part I - why?! -->
   <section>
     <h1>Why?</h1>
   </section>
+
+  <!-- Part I - conclusion -> the big question -->
   <section style="font-size: 250%">
     <p>
       What was I<br/>
       <em>thinking</em> about?
     </p>
   </section>
-
 </section>
 
+
+<!-- ------- --
+  -- Part II --
+  -- ------- -->
 <section>
-  <h2>Outline</h2>
-  <section style="font-size: 150%">
-    <p>I - What was I <em>thinking</em> about?</p>
-    <p class="fragment grow">II - Thinking Limitations</p>
-    <p>III - Some Examples</p>
-  </section>
+  <h1>
+    Part II<br/>
+    Thinking Limitations
+  </h1>
 </section>
 
+
+<!-- ------------ --
+  -- Miller's Law --
+  -- ------------ -->
 <section>
-  <section style="font-size: 150%">
+  <!-- Part II - Miller's Law - Definition -->
+  <section style="font-size: 175%">
     <h2>Miller's Law</h2>
-    <p>&nbsp;</p>
     <p>
       The number of objects an<br/>
       average human can hold in<br/>
@@ -173,7 +221,9 @@
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
-  <section style="font-size: 150%">
+
+  <!-- Part II - Miller's Law - Conclusion-->
+  <section style="font-size: 175%">
     <p>
       Anything the occupies your<br/>
       working memory reduces your<br/>
@@ -182,14 +232,18 @@
   </section>
 </section>
 
+
+<!-- -------------- --
+  -- Priming Effect --
+  -- -------------- -->
 <section>
-  <section style="font-size: 125%">
-    <h2>Priming Effect</h2>
-    <p>&nbsp;</p>
+  <!-- Part II - Priming - Definition -->
+  <section style="font-size: 150%">
+    <h2>The Priming Effect</h2>
     <p>
       Priming is a technique whereby<br/>
-      exposure to one stimulus influences a<br/>
-      response to a subsequent stimulus,<br/>
+      exposure to one stimulus influences<br/>
+      a response to a subsequent stimulus,<br/>
       without conscious guidance<br/>
       or intention.
     </p>
@@ -197,24 +251,37 @@
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
-  <section>
+
+  <!-- Part II - Priming - Example -->
+  <section style="font-size: 125%">
     <h1>Capital of France</h1>
   </section>
+
+  <!-- Part II - Priming - Example -->
   <section style="font-size: 150%">
     <p>picture of the eiffel tower</p>
   </section>
-  <section style="font-size: 150%">
+
+  <!-- Part II - Priming - Conclusion -->
+  <section style="font-size: 200%">
     <p>
       You did not will it,<br/>
       and you <em>can not</em> stop it.
     </p>
   </section>
 </section>
-  
+
+
+<!-- ----------------- --
+  -- Context Switching --
+  -- ----------------- -->
 <section>
+  <!-- Part II - Task Switching - Title -->
   <section style="font-size: 125%">
     <h2>Context Switching</h2>
   </section>
+
+  <!-- Part II - Task Switching - Execution Order -->
   <section>
     <table width=90%>
       <tr>
@@ -246,7 +313,9 @@
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
-  <section style="font-size: 150%">
+
+  <!-- Part II - Task Switching - Conclusion -->
+  <section style="font-size: 175%">
     <p>
       Regardless to task types,<br/>
       and the quantety of the costs.<br/>
@@ -257,20 +326,22 @@
 </section>
 
 
+<!-- -------- --
+  -- Part III --
+  -- -------- -->
 <section>
-  <h2>Outline</h2>
-  <section style="font-size: 150%">
-    <p>I - What was I <em>thinking</em> about?</p>
-    <p>II - Thinking Limitations</p>
-    <p class="fragment grow">III - Some Examples</p>
-  </section>
+  <h1>
+    Part III<br/>
+    Some Examples
+  </h1>
 </section>
 
-<section>
-  <h1>Thank You</h1>
-</section>    
 
+<!-- ------------------ --
+  -- Immediate Reaction --
+  -- ------------------ -->
 <section>
+  <!-- Part III - IR - code with bug -->
   <section>
     <pre><code class="hljs">
   def get_biggest_files(n, path='.'):
@@ -280,7 +351,62 @@
       </code></pre>
   </section>
 
-  <section> <!-- data-trim contenteditable-->
+  <!-- Part III - IR - write process 1 -->
+  <section data-transition="slide-in none-out">
+    <pre><code class="hljs">
+  &gt;&gt;&gt; n, path = 2, 'small folder'
+  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
+  &gt;&gt;&gt; lines[:2]
+  ['8\t./darker.css', '32\t./index.html']
+
+
+
+
+
+
+
+
+    </code></pre>
+  </section>
+
+  <!-- Part III - IR - write process 2 -->
+  <section data-transition="none">
+    <pre><code class="hljs">
+  &gt;&gt;&gt; n, path = 2, 'small folder'
+  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
+  &gt;&gt;&gt; lines[:2]
+  ['8\t./darker.css', '32\t./index.html']
+  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
+  &gt;&gt;&gt; pairs[:2]
+  [['8', './darker.css'], ['32', './index.html']]
+
+
+
+
+
+    </code></pre>
+  </section>
+
+  <!-- Part III - IR - write process 1 -->
+  <section data-transition="none">
+    <pre><code class="hljs">
+  &gt;&gt;&gt; n, path = 2, 'small folder'
+  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
+  &gt;&gt;&gt; lines[:2]
+  ['8\t./darker.css', '32\t./index.html']
+  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
+  &gt;&gt;&gt; pairs[:2]
+  [['8', './darker.css'], ['32', './index.html']]
+  &gt;&gt;&gt; nlargest(n, pairs)
+  [['96', './.git/objects/d1/31af6800b725b05b...'],
+   ['912', './images/repr.jpg'],
+   ['900', './.git/objects/20']]
+
+      </code></pre>
+  </section>
+
+  <!-- Part III - IR - write process 1 -->
+  <section data-transition="none">
     <pre><code class="hljs">
   &gt;&gt;&gt; n, path = 2, 'small folder'
   &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
@@ -297,15 +423,45 @@
       </code></pre>
   </section>
 
+  <!-- Part III - IR - conclusion 1 -->
+  <section>
+    <div style="font-size: 200%">
+      Lots of bugs are<br/>
+      found <em>earlier</em>
+    </div>
+  </section>
+
+  <!-- Part III - IR - conclusion 2 -->
+  <section>
+    <div style="font-size: 200%">
+      You have the<br/>
+      <em>confidence</em> your code works<span class="fragment">,<br/>
+      without spending extra<br/>
+      <em>concious efforts</em></span>
+    </div>
+  </section>
+
+  <!-- Part III - IR - conclusion 3 -->
   <section>
     <h1>Immediate Reaction</h1>
-    <li class="fragment">Reduce amount of context switching</li>
-    <li class="fragment"></li>
-    <li class="fragment"></li>
-    <li class="fragment"></li>
-    <li class="fragment"></li>
+  </section>
+
+  <!-- Part III - IR - conclusion 2 -->
+  <section>
+    <h1>Immediate Reaction</h1>
+    <div style="font-size: 200%">
+      <p>Reduce Task Switching</p>
+      <p>Improve Confidence</p>
+      <p>Acquire Fluency</p>
+    </div>
   </section>
 </section>
+
+
+
+<section>
+  <h1>Thank You</h1>
+</section>    
 
 <!--
   So far for the slides part,
