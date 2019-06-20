@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <title>How Thinking in Python Made Me a Better c++ Developer - Johnny D.</title>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="white.css" id="theme">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="reveal.js/lib/css/kimbie.light.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <link rel="stylesheet" href="css/white.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js/lib/css/kimbie.light.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
   </head>
 
   <body>
     <div class="reveal">
       <div class="slides">
-<!-- This is the actual body, 
-     so the heck with keeping the previous indentation!
-     This part is reindented from 0! 
--->
+
+<!----------------------------------------------------------
+  This is the actual presentation,
+  so the heck with keeping the previous indentation!
+  This part is reindented from 0! 
+------------------------------------------------------------>
 
 
 
@@ -37,65 +37,97 @@
   - Is different languages like changing lanses.
 
 
+ Sections
+  Psychology
+  1. pink elephant
+  2. priming
+  3. memory capacity
+  4. task switching
+  5. fluency
+
+
+ 1 2 3 4 5 
+     X X X bigest files
+   X X X   proxy -> prototype -> faster, less bugs, readability, (7+-2) clarity
+     X X X object representation
+ X X     X dict / mapping / dense/sparse/small/key-dist/key-size/value-size (prototyping will help you move faster, when you get to the problem of chosing a data-structure it will be isolated)
+ X X X     shared-pointers
+
+[2] introduction
+[4] psychology
+[5] biggest files
+[5] proxy+prototype
+[2] object representation
+[2] dict
+[2] shared-pointers
+[3] my experiment
+[2] ending
+
+
+* take-aways
+  - Understand how your brain works and work with it
+  - Prototype
+  - execute code as you write it
+  - start with simple data structures that everyone is fluent with.
+  - use vocabulary that does not destract you from the problem.
+
 -->
 
 <section>
+  <h1 style="font-size: 200%;">
+    How Thinking in<br/>
+    Python Made Me a Better<br/>
+    Software Engineer
+  </h1>
+  <p>EuroPython 2019<br/>
+      Johnny Dude</p>
+  <aside class="notes">
+    <p>Thank you all for coming.</p>
+    <p>
+      I want to start by thanking the organizers of EuroPython.
+      This is actually my first EuroPython,
+      it has been awesome so far,
+      and I hope you are all enjoying it too.
+    </p>
+  </aside>
+</section>
 
-  <section>
-    <h1>How Thinking in Python Made Me a Better Developer</h1>
-    <p>EuroPython 2019<br/>
-        Johnny Dude</p>
-    <aside class="notes">
-      <p>Thank you all for coming.</p>
-      <p>
-        I want to start by thanking the organizers of EuroPython.
-        This is actually my first EuroPython,
-        it has been awesome so far,
-        and I hope you are all enjoying it too.
-      </p>
-    </aside>
-  </section>
-
-  <section>
-      <h3>Hi, I'm Johnny Dude</h3>
-      <table width=100% style="font-size: 75%;">
-      <tr>
-        <td width=25%>
-          <img class="plain" src="johnny_round.png">
-          </img>
-        </td>
-        <td width=75%>
-          <div style="text-align: center">
-            <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
-            <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
-            <p>Using Python at work since 2005</p>
-            <p>I use Python for <em>prototyping</em></p>
-            <p>Responsible for c++ <em>production</em> code</p>
-            <p>This is my first EuroPython talk</p>
-          </div>
-        </td>
-      </tr>
-    </table>
-    <aside class="notes">
-      <p>My name is Johnny <b>Dude</b></p>
-      <p>This <b>is</b> my real name</p>
-      <p>I work at Toga Networks</p>
-      <p> TODO </p>
-    </aside>
-  </section>
+<section>
+    <h3>Hi, I'm Johnny Dude</h3>
+    <table width=100%>
+    <tr>
+      <td width=25%>
+        <img class="plain" src="images/johnny_round.png">
+        </img>
+      </td>
+      <td width=75%>
+        <div style="text-align: center; font-size: 75%;">
+          <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
+          <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
+          <p>Using Python at work since 2005</p>
+          <p>I use Python for <em>prototyping</em></p>
+          <p>Responsible for c++ <em>production</em> code</p>
+          <p>This is my first EuroPython talk</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <aside class="notes">
+    <p>My name is Johnny <b>Dude</b></p>
+    <p>This <b>is</b> my real name</p>
+    <p>I work at Toga Networks</p>
+    <p> TODO </p>
+  </aside>
 </section>
 
 
 <section>
-  <section>
-    <h1>Psychological Concepts</h1>
-  </section>
+  <h1>Psychological Concepts</h1>
+</section>
 
+
+<section>
   <section data-background="images/pink.jpg">
-  </section>
-
-  <section>
-    <h2>Ironic Process Theory</h2>
   </section>
 
   <section>
@@ -107,12 +139,8 @@
       &nbsp;
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a herf=""><em>Add References</em></a>
+      <a href="https://en.wikipedia.org/wiki/Ironic_process_theory"><em>* Ironic Process Theory</em></a>
     </div>
-  </section>
-
-  <section>
-    <h2>Miller's Law</h2>
   </section>
 
   <section>
@@ -124,37 +152,30 @@
       &nbsp;
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a herf=""><em>Add References</em></a>
+      <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two"><em>The Magical Number Seven, Plus or Minus Two</em></a>
     </div>
   </section>
 
   <section>
-    <div style="font-size: 180%">
-      &nbsp;<br/>
+    <div style="font-size: 175%">
       Anything that occupies<br/>
       your working memory reduces<br/>
       your ability to <em>think</em>.<br/>
-      &nbsp;
     </div>
-    <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a herf=""><em>Add References</em></a>
-    </div>
-  </section>
-
-  <section>
-    <h2>The Priming Effect</h2>
   </section>
 
   <section>
     <div style="font-size: 150%">
-      Priming is a technique whereby<br/>
-      exposure to one stimulus influences<br/>
-      a response to a subsequent stimulus,<br/>
-      without conscious guidance<br/>
-      or intention.
+      Priming is a technique<br/>
+      whereby exposure to one<br/>
+      stimulus influences a response<br/>
+      to a subsequent stimulus,
+      without conscious guidance
+      or intention. <br/>
+      &nbsp;
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a herf=""><em>Add References</em></a>
+      <a href="https://en.wikipedia.org/wiki/Priming_(psychology)"><em>The Priming Effect</em></a>
     </div>
   </section>
 
@@ -167,10 +188,6 @@
       You did not will it,<br/>
       and you <em>can not</em> stop it.
     </div>
-  </section>
-
-  <section>
-    <h1>Context Switching</h1>
   </section>
 
   <section>
@@ -291,6 +308,14 @@
 
   <section>
     <div style="font-size: 200%">
+      <em>Immediate reaction</em><br/>
+      helps learning faster<br/>
+      and acquire fluency
+    </div>
+  </section>
+
+  <section>
+    <div style="font-size: 175%">
       You have the<br/>
       <em>confidence</em> your code works<span class="fragment">,<br/>
       without spending extra<br/>
@@ -300,60 +325,207 @@
 
   <section>
     <div style="font-size: 200%">
-      <em>Immediate Reaction</em>
-      <p class="fragment">Learn Faster</p>
-      <p class="fragment">Acquire Fluency</p>
-    </div>
-  </section>
-
-  <section>
-    <div style="font-size: 200%">
-      <p>Reduced Task Switching</p>
-      <p>Reduced Concious Efforts</p>
-      <p>Acquire Fluency Faster</p>
+      <p>Reduced task switching</p>
+      <p>Reduced concious efforts</p>
+      <p>Acquire fluency faster</p>
     </div>
   </section>
 
 </section>
 
 
+<section>
+  <section>
+    <div style="font-size: 125%">
+      <pre class="py3"><code class="hljs" data-trim>
+  result = [x / 2 for x in xs if (x % 2) == 0]
+      </code></pre>
+    </div>
+    <div style="font-size: 125%" class="fragment">
+      <pre class="py3"><code class="hljs" data-trim>
+  result = sorted(map(
+      lambda x: x / 2,
+      filter(lambda x: (x % 2) == 0, xs)
+  ))
+      </code></pre>
+    </div>
+    <div style="font-size: 125%" class="fragment">
+      <pre class="py3"><code class="hljs" data-trim>
+  ys = list(filter(lambda x: (x % 2) == 0, xs))
+  result = list(map(lambda x / 2, ys))
+      </code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div style="font-size: 125%">
+      <pre class="py3"><code class="hljs" data-trim>
+  result = sorted(map(
+      lambda x: x / 2,
+      filter(lambda x: (x % 2) == 0, xs)
+  ))
+      </code></pre>
+    </div>
+    <div style="font-size: 125%">
+      <pre class="py3"><code class="hljs" data-trim>
+  ys = list(filter(lambda x: (x % 2) == 0, xs))
+  result = list(map(lambda x / 2, ys))
+  result.sort()
+      </code></pre>
+    </div>
+  </section>
+
+
+  <section>
+    <div style="font-size: 80%">
+      <pre class="py3"><code class="hljs" data-trim>
+std::vector&lt;int&gt; firsts_sorted_by_second(
+  const std::vector&lt;std::pair&lt;int, int&gt;&gt;& items
+) {
+  std::vector&lt;std::pair&lt;int, int&gt;&gt; temp(items);
+
+  std::sort(
+    temp.begin(),
+    temp.end(), 
+    [](const int& a, const int& b
+  ) -> bool { 
+    return a.second > b.second; 
+  });
+
+  std::vector&lt;int&gt; results;
+  results.reserve(temp.size());
+  std::transform(
+    temp.begin(),
+    temp.end(),
+    std::back_inserter(results),
+    [](auto const& pair){ return pair.first; }
+  );
+
+  return results;
+}
+      </code></pre>
+    </div>
+  </section>
+
+
+</section>
+
+<section>
+  <h1>
+    My Experiment
+  </h1>
+</section>
+
+<section>
+  <section>
+    <div>
+      <table width=100%>
+        <tr style="border-top: thick solid black;">
+          <td>Try</td>
+          <td>Language</td>
+          <td>Minutes</td>
+          <td>SLOC</td>
+        </tr>
+        <tr>
+          <td>1<br/>2<br/>3<br/>4<br/>5</td>
+          <td>Python<br/>c++<br/>Python<br/>Python<br/>c++</td>
+          <td class="fragment">42<br/>151<br/>22<br/>14<br/>30</td>
+          <td class="fragment">74<br/>108<br/>54<br/>50<br/>63</td>
+        </tr>
+        <tr style="border-top: thick solid black; border-bottom: none;">
+          <td>&nbsp;</td>                                                                                                                                    	
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div style="font-size: 150%">
+      <table width=100%>
+        <tr>
+          <td>4<sup>th</sup><br/>5<sup>th</sup></td>
+          <td>Python<br/>c++</td>
+          <td>14 mins<br/>30 mins</td>
+          <td>50 SLOC<br/>63 SLOC</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <pre class="py3file"><code class="hljs" data-trim>
+def calc_path(prevs, point):
+    point = prevs[point]
+    while point in prevs:
+        yield point
+        point = prevs[point]
+
+points = set(calc_path(prevs, end_point))
+    </code></pre>
+    <pre class="cppfile"><code class="hljs" data-trim>
+set&lt;Point&gt; calc_path(map&lt;Point, Point&gt; prevs, Point point) {
+    set&lt;Point&gt; results;
+    point = prevs[point];
+    while (prevs.find(point) != prevs.end()) {
+        results.insert(point);
+        point = prevs[point];
+    }
+    return results;
+}
+
+auto points = calc_path(prevs, end_point);
+    </code></pre>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+      Catching bugs <em>earlier</em><br/>
+      reduces task switching
+    </div>
+  </section>
+
+</section>
+
 
 <section>
   <h1>Thank You</h1>
 </section>    
 
-<!--
-  So far for the slides part,
-  back to original document indentation. 
--->
+<!----------------------------------------------------------
+  presentation end, back to the html part
+------------------------------------------------------------>
+
       </div>
     </div>
 
     <script src="reveal.js/lib/js/head.min.js"></script>
     <script src="reveal.js/js/reveal.js"></script>
-		<script>
+    <script>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal.js/plugin/search/search.js', async: true },
-					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
-				]
-			});
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/search/search.js', async: true },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
   </body>
 </html>
