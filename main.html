@@ -28,330 +28,192 @@
 -->
 
 
-<!-- ------------ --
-  -- Introduction --
-  -- ------------ -->
+
+<!--
+  Nobuko Comments
+
+  - Why is it better to think in Python and then in c++.
+
+  - Is different languages like changing lanses.
+
+
+-->
+
 <section>
 
-  <!-- Intoduction - Title -->
   <section>
-    <h1>How Thinking in Python Made Me a Better c++ Developer</h1>
+    <h1>How Thinking in Python Made Me a Better Developer</h1>
     <p>EuroPython 2019<br/>
         Johnny Dude</p>
     <aside class="notes">
-      Thank you all for coming.<br/>
-      I want to start by thanking the organizers of EuroPython. This is actually my first EuroPython, it has been awesome so far, I hope you are all enjoying it too.
+      <p>Thank you all for coming.</p>
+      <p>
+        I want to start by thanking the organizers of EuroPython.
+        This is actually my first EuroPython,
+        it has been awesome so far,
+        and I hope you are all enjoying it too.
+      </p>
     </aside>
   </section>
 
-  <!-- Intoduction - About Me -->
   <section>
-    <table width=100%>
+      <h3>Hi, I'm Johnny Dude</h3>
+      <table width=100% style="font-size: 75%;">
       <tr>
         <td width=25%>
-          <img class="plain" src="johnny_round.png"></img>
+          <img class="plain" src="johnny_round.png">
+          </img>
         </td>
         <td width=75%>
           <div style="text-align: center">
-            <a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/>
-            Principal Engineer @ <a herf="https://www.toganetworks.com">TogaNetworks</a><br/>
-            Do <strong>not</strong> write production Python code<br/>
-            This is my first EuroPython talk<br/>
+            <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
+            <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
+            <p>Using Python at work since 2005</p>
+            <p>I use Python for <em>prototyping</em></p>
+            <p>Responsible for c++ <em>production</em> code</p>
+            <p>This is my first EuroPython talk</p>
           </div>
         </td>
       </tr>
     </table>
-  </section>
-
-  <!-- Intoduction - Outline -->
-  <section>
-    <div  style="font-size: 150%">
-      <p>Part I - What is the problem?</p>
-      <p>Part II - Thinking Limitations</p>
-      <p>Part III - Actual Examples</p>
-    </div>
+    <aside class="notes">
+      <p>My name is Johnny <b>Dude</b></p>
+      <p>This <b>is</b> my real name</p>
+      <p>I work at Toga Networks</p>
+      <p> TODO </p>
+    </aside>
   </section>
 </section>
 
 
-<!-- ------ --
-  -- Part I --
-  -- ------ -->
 <section>
-  <h1>
-    Part I<br/>
-    What is the Problem?
-  </h1>
-</section>
-
-<section>
-  <!-- Part I - shortest path title -->
   <section>
-    <h2>The Shortest Path Problem</h2>
+    <h1>Psychological Concepts</h1>
   </section>
 
-  <!-- Part I - shortest path details -->
+  <section data-background="images/pink.jpg">
+  </section>
+
   <section>
-    <div style="font-size: 150%">
-      Reads a text input file maze<br/>
-      and write the shortest path solution<br/>
-      to an output text file
+    <h2>Ironic Process Theory</h2>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+        &nbsp;<br/>
+        Trying not to think about<br/>
+      something, makes thinking<br/>
+      about it more likely<br/>
+      &nbsp;
     </div>
-  </section>
-
-  <!-- Part I - impl is faster the second time -->
-  <section style="font-size: 150%">
-    <p>
-      Implementing a solution for a<br/>
-      problem takes less time the second<br/>
-      time you implement it.
-    </p>
-  </section>
-
-  <!-- Part I - my experiment result 1 -->
-  <section style="font-size: 100%">
-    <p>
-      First try / Python, 42 minutes<br/>
-      Second try / c++, ~150 minutes<br/>
-    </p>
-  </section>
-
-  <!-- Part I - my experiment result 2 -->
-  <section style="font-size: 100%">
-    <p>
-      First try / Python, 42 minutes<br/>
-      Second try / c++, ~150 minutes<br/>
-      Third try / Python, 22 minutes<br/>
-      Fourth try / Python, 14 minutes<br/>
-      Fifth try / c++, 30 minutes<br/>
-    </p>
-  </section>
-
-  <!-- Part I - article results -->
-  <section style="font-size: 150%">
-    <h3>Python vs c++</h3>
-    <div>
-      <table width=100%>
-        <tr>
-          <td>
-            Per Task
-            <li>4 times faster</li>
-            <li>Less SLOC</li>
-            <li>Less Bugs</li>
-          </td>
-          <td>
-            Per Commit
-            <li>Less SLOC</li>
-            <li>Less Bugs</li>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div style="font-size: 50%">
-      <a herf=""><em>Add References</em></a><br/>
+    <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
 
-  <!-- Part I - my experiment results 3 -->
-  <section style="font-size: 100%">
-    <p>
-      First try / Python, 42 minutes, XX SLOC<br/>
-      Second try / c++, ~150 minutes, XX SLOC<br/>
-      Third try / Python, 22 minutes, XX SLOC<br/>
-      Fourth try / Python, 14 minutes, XX SLOC<br/>
-      Fifth try / c++, 30 minutes, XX SLOC<br/>
-    </p>
-    <p style="font-size: 50%">
-      <em>* SLOC excluding: comments lines, empty lines, bracelets only lines.</em>
-    </p>
-  </section>
-
-  <!-- Part I - my experiment results 4-->
-  <section style="font-size: 150%">
-    <h3>Human Reader Comparison</h3>
-    <div>
-      4<sup style="font-size: 50%">th</sup> vs 5<sup style="font-size: 50%">th</sup> implementations.
-      <li>Same Algorithm</li>
-      <li>Same Data Structure</li>
-      <li>Same Functions</li>
-      <li>Same Variable Names</li>
-    </div>
-  </section>
-
-  <!-- Part I - why?! -->
   <section>
-    <h1>Why?</h1>
-  </section>
-
-  <!-- Part I - conclusion -> the big question -->
-  <section style="font-size: 250%">
-    <p>
-      What was I<br/>
-      <em>thinking</em> about?
-    </p>
-  </section>
-</section>
-
-
-<!-- ------- --
-  -- Part II --
-  -- ------- -->
-<section>
-  <h1>
-    Part II<br/>
-    Thinking Limitations
-  </h1>
-</section>
-
-
-<!-- ------------ --
-  -- Miller's Law --
-  -- ------------ -->
-<section>
-  <!-- Part II - Miller's Law - Definition -->
-  <section style="font-size: 175%">
     <h2>Miller's Law</h2>
-    <p>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+      &nbsp;<br/>
       The number of objects an<br/>
       average human can hold in<br/>
-      working memory is <b>7 ± 2</b>
-    </p>
-    <div style="font-size: 50%">
+      working memory is <b>7 ± 2</b><br/>
+      &nbsp;
+    </div>
+    <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
 
-  <!-- Part II - Miller's Law - Conclusion-->
-  <section style="font-size: 175%">
-    <p>
-      Anything the occupies your<br/>
-      working memory reduces your<br/>
-      ability to <em>think</em>.
-    </p>
+  <section>
+    <div style="font-size: 180%">
+      &nbsp;<br/>
+      Anything that occupies<br/>
+      your working memory reduces<br/>
+      your ability to <em>think</em>.<br/>
+      &nbsp;
+    </div>
+    <div style="font-size: 75%; position: absolute; bottom: 0px">
+      <a herf=""><em>Add References</em></a>
+    </div>
   </section>
-</section>
 
-
-<!-- -------------- --
-  -- Priming Effect --
-  -- -------------- -->
-<section>
-  <!-- Part II - Priming - Definition -->
-  <section style="font-size: 150%">
+  <section>
     <h2>The Priming Effect</h2>
-    <p>
+  </section>
+
+  <section>
+    <div style="font-size: 150%">
       Priming is a technique whereby<br/>
       exposure to one stimulus influences<br/>
       a response to a subsequent stimulus,<br/>
       without conscious guidance<br/>
       or intention.
-    </p>
-    <div style="font-size: 50%">
+    </div>
+    <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a herf=""><em>Add References</em></a>
     </div>
   </section>
 
-  <!-- Part II - Priming - Example -->
-  <section style="font-size: 125%">
+  <section>
     <h1>Capital of France</h1>
   </section>
 
-  <!-- Part II - Priming - Example -->
-  <section style="font-size: 150%">
-    <p>picture of the eiffel tower</p>
-  </section>
-
-  <!-- Part II - Priming - Conclusion -->
-  <section style="font-size: 200%">
-    <p>
+  <section>
+    <div style="font-size: 200%">
       You did not will it,<br/>
       and you <em>can not</em> stop it.
-    </p>
-  </section>
-</section>
-
-
-<!-- ----------------- --
-  -- Context Switching --
-  -- ----------------- -->
-<section>
-  <!-- Part II - Task Switching - Title -->
-  <section style="font-size: 125%">
-    <h2>Context Switching</h2>
-  </section>
-
-  <!-- Part II - Task Switching - Execution Order -->
-  <section>
-    <table width=90%>
-      <tr>
-        <td>
-          <list>
-            <li>Read Documents</li>
-            <li>Implement</li>
-            <li>Debug</li>
-          </list>
-          <list class="fragment">
-            <li>Read Documents 2</li>
-            <li>Implement 2</li>
-            <li>Debug 2</li>
-          </list>
-        </td>
-        <td>
-          <list class="fragment">
-            <li>Read Documents</li>
-            <li>Read Documents 2</li>
-            <li>Implement</li>
-            <li>Implement 2</li>
-            <li>Debug</li>
-            <li>Debug 2</li>
-          </list>
-        </td>
-      </tr>
-    </table>
-    <div style="font-size: 50%">
-      <a herf=""><em>Add References</em></a>
     </div>
   </section>
 
-  <!-- Part II - Task Switching - Conclusion -->
-  <section style="font-size: 175%">
-    <p>
-      Regardless to task types,<br/>
-      and the quantety of the costs.<br/>
-      Task switching reduces your</br>
-      ability to <em>think</em>.
-    </p>
+  <section>
+    <h1>Context Switching</h1>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+      Task switching reduces</br>
+      your <em>productivity time</em>.
+    </div>
+  </section>
+
+  <section>
+    <h1>Fluency</h1>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+      <p>Priming</p>
+      <p>Memory Capacity</p>
+      <p>Ironic Process Theory</p>
+      <p>Task Switching</p>
+      <p>Fluency</p>
+    </div>
   </section>
 </section>
 
 
-<!-- -------- --
-  -- Part III --
-  -- -------- -->
 <section>
   <h1>
-    Part III<br/>
-    Some Examples
+    How this Relates to<br/>
+    the Development Processes
   </h1>
 </section>
 
 
-<!-- ------------------ --
-  -- Immediate Reaction --
-  -- ------------------ -->
 <section>
-  <!-- Part III - IR - code with bug -->
   <section>
     <pre><code class="hljs">
   def get_biggest_files(n, path='.'):
       lines = system(f'du -a {path}').splitlines()
       pairs = [line.split('\t') for line in lines]
-      return [name for size, name in nlargest(n, paires)]
+      return [name for size, name in nlargest(n, pairs)]
       </code></pre>
   </section>
 
-  <!-- Part III - IR - write process 1 -->
   <section data-transition="slide-in none-out">
     <pre><code class="hljs">
   &gt;&gt;&gt; n, path = 2, 'small folder'
@@ -369,7 +231,6 @@
     </code></pre>
   </section>
 
-  <!-- Part III - IR - write process 2 -->
   <section data-transition="none">
     <pre><code class="hljs">
   &gt;&gt;&gt; n, path = 2, 'small folder'
@@ -387,7 +248,6 @@
     </code></pre>
   </section>
 
-  <!-- Part III - IR - write process 1 -->
   <section data-transition="none">
     <pre><code class="hljs">
   &gt;&gt;&gt; n, path = 2, 'small folder'
@@ -405,7 +265,6 @@
       </code></pre>
   </section>
 
-  <!-- Part III - IR - write process 1 -->
   <section data-transition="none">
     <pre><code class="hljs">
   &gt;&gt;&gt; n, path = 2, 'small folder'
@@ -423,15 +282,13 @@
       </code></pre>
   </section>
 
-  <!-- Part III - IR - conclusion 1 -->
   <section>
     <div style="font-size: 200%">
-      Lots of bugs are<br/>
-      found <em>earlier</em>
+      Catching bugs <em>earlier</em><br/>
+      reduces task switching
     </div>
   </section>
 
-  <!-- Part III - IR - conclusion 2 -->
   <section>
     <div style="font-size: 200%">
       You have the<br/>
@@ -441,20 +298,22 @@
     </div>
   </section>
 
-  <!-- Part III - IR - conclusion 3 -->
   <section>
-    <h1>Immediate Reaction</h1>
-  </section>
-
-  <!-- Part III - IR - conclusion 2 -->
-  <section>
-    <h1>Immediate Reaction</h1>
     <div style="font-size: 200%">
-      <p>Reduce Task Switching</p>
-      <p>Improve Confidence</p>
-      <p>Acquire Fluency</p>
+      <em>Immediate Reaction</em>
+      <p class="fragment">Learn Faster</p>
+      <p class="fragment">Acquire Fluency</p>
     </div>
   </section>
+
+  <section>
+    <div style="font-size: 200%">
+      <p>Reduced Task Switching</p>
+      <p>Reduced Concious Efforts</p>
+      <p>Acquire Fluency Faster</p>
+    </div>
+  </section>
+
 </section>
 
 
