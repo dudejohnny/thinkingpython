@@ -74,13 +74,18 @@
 -->
 
 <section>
-  <h1 style="font-size: 175%;">
+  <h2>
     How Thinking in<br/>
     Python Made Me a Better<br/>
     Software Engineer
-  </h1>
-  <p>EuroPython 2019<br/>
-      Johnny Dude</p>
+  </h2>
+  <p>
+    EuroPython 2019<br/>
+    Johnny Dude
+  </p>
+  <div style="position: fixed; bottom:10%; left:0%">
+    <a href="">http://somewhere/ThinkingInPython</a>
+  </div>
   <aside class="notes">
     <p>Thank you all for coming.</p>
     <p>
@@ -122,15 +127,6 @@
 
 
 <section>
-  <div style="font-size: 150%">
-    <p>1. Know how your head works,<br/> and work with it</p>
-    <p>&nbsp;</p>
-    <p>2. Prototype, specifically in Python</p>
-  </div>
-</section>
-
-
-<section>
   <h1>Psychological Concepts</h1>
 </section>
 
@@ -140,12 +136,14 @@
   </section>
 
   <section>
-    <div style="font-size: 200%">
+    <div>
+      <h2>
         &nbsp;<br/>
         Trying not to think about<br/>
-      something, makes thinking<br/>
-      about it more likely<br/>
-      &nbsp;
+        something, makes thinking<br/>
+        about it more likely<br/>
+        &nbsp;
+      </h2>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a href="https://en.wikipedia.org/wiki/Ironic_process_theory"><em>* Ironic Process Theory</em></a>
@@ -153,23 +151,29 @@
   </section>
 
   <section>
-    <div style="font-size: 200%">
-      &nbsp;<br/>
-      The number of objects an<br/>
-      average human can hold in<br/>
-      working memory is <b>7 ± 2</b><br/>
-      &nbsp;
+    <div>
+      <h2>
+        &nbsp;<br/>
+        The number of objects an<br/>
+        average human can hold in<br/>
+        working memory is <b>7 ± 2</b><br/>
+        &nbsp;
+      </h2>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two"><em>The Magical Number Seven, Plus or Minus Two</em></a>
+      <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two"><em>* The Magical Number Seven, Plus or Minus Two</em></a>
     </div>
   </section>
 
   <section>
-    <div style="font-size: 175%">
-      Anything that occupies<br/>
-      your working memory reduces<br/>
-      your ability to <em>think</em>.<br/>
+    <div>
+      <h3>
+        &nbsp;<br/>
+        Anything that occupies<br/>
+        your working memory reduces<br/>
+        your ability to <em>think</em><br/>
+        &nbsp;
+      </h3>
     </div>
   </section>
 
@@ -188,21 +192,27 @@
       &nbsp;
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
-      <a href="https://en.wikipedia.org/wiki/Priming_(psychology)"><em>The Priming Effect</em></a>
+      <a href="https://en.wikipedia.org/wiki/Priming_(psychology)"><em>* The Priming Effect</em></a>
     </div>
   </section>
 
   <section>
-    <div style="font-size: 200%">
-      You did not will it,<br/>
-      and you <em>can not</em> stop it.
-    </div>
+    <h2>
+      You <em>can not</em> stop it
+    </h2>
   </section>
 
   <section>
-    <div style="font-size: 200%">
-      Task switching reduces</br>
-      your <em>productivity time</em>.
+    <div>
+      <h2>
+        &nbsp;<br/>
+        Task switching reduces</br>
+        your <em>productivity time</em><br/>
+        &nbsp;
+      </h2>
+    </div>
+    <div style="font-size: 75%; position: absolute; bottom: 0px">
+      <a href=""><em>* Reference Missing</em></a>
     </div>
   </section>
 
@@ -223,10 +233,10 @@
 
 
 <section>
-  <h1>
-    How this Relates to<br/>
-    the Development Processes
-  </h1>
+  <h2>
+    How this relates to<br/>
+    the development processes
+  </h2>
 </section>
 
 
@@ -234,7 +244,7 @@
 
   <section>
     <h1>
-      Immediate Reaction
+      Immediate Feedback
     </h1>
   </section>
 
@@ -369,18 +379,10 @@
 
   <section>
     <pre><code class="hljs" data-trim>
-  Counter({
-    "Walking Dead": 19,
-    "Alive": 7,
-    "Dead": 2,
-    "Not Born": 1,
-  })
-    </code></pre>
-  </section>
-
-  <section>
-    <pre><code class="hljs" data-trim>
   "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
+    </code></pre>
+    <pre class="fragment"><code class="hljs" data-trim>
+  ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
     </code></pre>
   </section>
   
@@ -398,27 +400,55 @@
 
   <section>
     <pre><code class="hljs" data-trim>
-  # compact dict
-  { 
-    22: "Dead",
+  { 22: "Dead",
     35: "Alive",
     0: "Alive",
-    10: "Alive",
-  }
-  # re searchable keys
+    10: "Alive" }
   "Brad Pitt\nMia Wallace\nTyler Durden\nUma Thurman\n"
     </code></pre>
-
     <pre class="fragment"><code class="hljs" data-trim>
-  { 
-    "Tyler Durden": "Dead",
+  { "Tyler Durden": "Dead",
     "Uma Thurman": "Alive",
     "Brad Pitt": "Alive",
-    "Mia Wallace": "Alive",
-  }
+    "Mia Wallace": "Alive" }
+    </code></pre>
+    <span class="fragment">
+      <pre><code class="hljs" data-trim>
+  "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
+      </code></pre>
+      <pre><code class="hljs" data-trim>
+  ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
+      </code></pre>
+    </span>
+  </section>
+
+  <section>
+    <pre><code class="hljs" data-trim>
+  Counter({
+    "Walking Dead": 19,
+    "Alive": 7,
+    "Dead": 2,
+    "Not Born": 1,
+  })
     </code></pre>
   </section>
 
+  <section>
+      <div style="font-size: 150%; text-align: left">
+        <ul>
+          <li>
+            Simple composable data structure.
+          </li>
+          <li class="fragment">
+            Representation counts <!-- you can read, write, imagine, and discuss -->
+          </li>
+          <li class="fragment">
+            Design seperation <!-- give DS simple API, and work on the complex impl seperatly-->
+          </li>
+        </ul>
+      </div>
+    </section>
+  
 </section>
 
 
@@ -459,27 +489,6 @@
   </section>
 
   <section>
-    <div>
-      <pre class="py3"><code class="hljs" data-trim>
-  def half_of_firsts_sorted_by_second(pairs):
-    second = lambda pair: pair[1]
-    return(x / 2 for x, y in sorted(xs, key=second))
-      </code></pre>
-    </div>
-    <div class="fragment">
-      <pre class="py3"><code class="hljs" data-trim>
-  def half_of_firsts_sorted_by_second(pairs):
-    half_of_first = lambda pair: pair[0] / 2
-    second = lambda pair: pair[1]
-    tmp = list(pairs)
-    tmp.sort(key=second)
-    tmp2 = map(half_of_first, tmp)
-    return tmp2
-      </code></pre>
-    </div>
-  </section>
-
-  <section>
     <div style="font-size: 60%">
       <pre class="py3"><code class="hljs" data-trim>
 std::vector&lt;int&gt; firsts_sorted_by_second(
@@ -507,6 +516,16 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
   return results;
 }
       </code></pre>
+    </div>
+  </section>
+
+  <section>
+    <div style="font-size: 150%">
+      <ul>
+        <li>Readability counts</li>
+        <li class="fragment">Composability counts</li>
+        <li class="fragment">Vocalisation counts</li>
+      </ul>
     </div>
   </section>
 
@@ -794,6 +813,7 @@ auto points = calc_path(prevs, end_point);
   2. Working Memory (Defer work that can be done later seperately) 
   3. Task Switching (Immediate Reaction, don't switch task types)
 
+Immediate 
 * map vs dict
 
 * int sizes...
