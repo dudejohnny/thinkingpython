@@ -74,16 +74,18 @@
 -->
 
 <section>
-  <h2>
+  <div>&nbsp;<br/>&nbsp;</div>
+  <h1>
     How Thinking in<br/>
     Python Made Me a Better<br/>
     Software Engineer
-  </h2>
+  </h1>
   <p>
     EuroPython 2019<br/>
     Johnny Dude
   </p>
-  <div style="position: fixed; bottom:10%; left:0%">
+  <div style="text-align: left;">
+    &nbsp;<br/>
     <a href="">http://somewhere/ThinkingInPython</a>
   </div>
   <aside class="notes">
@@ -98,7 +100,7 @@
 </section>
 
 <section>
-    <h3>Hi, I'm Johnny Dude</h3>
+    <h1>Hi, I'm Johnny Dude</h1>
     <table width=100%>
     <tr>
       <td width=25%>
@@ -106,7 +108,7 @@
         </img>
       </td>
       <td width=75%>
-        <div style="text-align: center; font-size: 75%;">
+        <div style="text-align: center;">
           <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
           <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
           <p>Using Python at work since 2005</p>
@@ -135,15 +137,15 @@
   <section data-background="images/pink.jpg">
   </section>
 
-  <section>
+  <section data-background="images/ironic tr.jpg">
     <div>
-      <h2>
+      <h1>
         &nbsp;<br/>
         Trying not to think about<br/>
         something, makes thinking<br/>
         about it more likely<br/>
         &nbsp;
-      </h2>
+      </h1>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a href="https://en.wikipedia.org/wiki/Ironic_process_theory"><em>* Ironic Process Theory</em></a>
@@ -152,28 +154,28 @@
 
   <section>
     <div>
-      <h2>
+      <h1>
         &nbsp;<br/>
         The number of objects an<br/>
         average human can hold in<br/>
         working memory is <b>7 ± 2</b><br/>
         &nbsp;
-      </h2>
+      </h1>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two"><em>* The Magical Number Seven, Plus or Minus Two</em></a>
     </div>
   </section>
 
-  <section>
+  <section data-background="images/7pm2 tr.jpg">
     <div>
-      <h3>
+      <h1>
         &nbsp;<br/>
         Anything that occupies<br/>
         your working memory reduces<br/>
         your ability to <em>think</em><br/>
         &nbsp;
-      </h3>
+      </h1>
     </div>
   </section>
 
@@ -181,42 +183,41 @@
     <h1>Capital of France</h1>
   </section>
 
-  <section>
-    <div style="font-size: 150%">
-      Priming is a technique<br/>
-      whereby exposure to one<br/>
-      stimulus influences a response<br/>
-      to a subsequent stimulus,
-      without conscious guidance
-      or intention. <br/>
-      &nbsp;
+  <section data-background="images/priming tr.jpg">
+    <div style="font-size: 180%">
+      &nbsp;<br/>
+      Priming is a technique whereby exposure<br/>
+      to one stimulus influences a response<br/>
+      to a subsequent stimulus, without<br/>
+      conscious guidance or intention<br/>
+      &nbsp;<br/>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a href="https://en.wikipedia.org/wiki/Priming_(psychology)"><em>* The Priming Effect</em></a>
     </div>
   </section>
 
-  <section>
-    <h2>
+  <section data-background="images/priming tr.jpg">
+    <h1>
       You <em>can not</em> stop it
-    </h2>
+    </h1>
   </section>
 
-  <section>
+  <section data-background="images/tasks tr.jpg">
     <div>
-      <h2>
+      <h1>
         &nbsp;<br/>
         Task switching reduces</br>
         your <em>productivity time</em><br/>
         &nbsp;
-      </h2>
+      </h1>
     </div>
     <div style="font-size: 75%; position: absolute; bottom: 0px">
       <a href=""><em>* Reference Missing</em></a>
     </div>
   </section>
 
-  <section>
+  <section data-background="images/fluency tr.jpg">
     <h1>Fluency</h1>
   </section>
 
@@ -233,15 +234,14 @@
 
 
 <section>
-  <h2>
+  <h1>
     How this relates to<br/>
     the development processes
-  </h2>
+  </h1>
 </section>
 
 
 <section>
-
   <section>
     <h1>
       Immediate Feedback
@@ -253,17 +253,17 @@
   </section>
 
   <section>
-    <pre><code class="hljs">
+    <pre style="font-size: 100%"><code class="hljs" data-trim>
   def get_biggest_files(n, path='.'):
       lines = system(f'du -a {path}').splitlines()
       pairs = [line.split('\t') for line in lines]
       return [name for size, name in nlargest(n, pairs)]
-      </code></pre>
+    </code></pre>
   </section>
 
   <section data-transition="slide-in none-out">
-    <pre><code class="hljs">
-  &gt;&gt;&gt; n, path = 2, 'small folder'
+    <pre style="font-size: 100%;"><code class="hljs"
+>  &gt;&gt;&gt; n, path = 2, 'small folder'
   &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
   &gt;&gt;&gt; lines[:2]
   ['8\t./darker.css', '32\t./index.html']
@@ -279,8 +279,8 @@
   </section>
 
   <section data-transition="none">
-    <pre><code class="hljs">
-  &gt;&gt;&gt; n, path = 2, 'small folder'
+    <pre style="font-size: 100%;"><code class="hljs"
+>  &gt;&gt;&gt; n, path = 2, 'small folder'
   &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
   &gt;&gt;&gt; lines[:2]
   ['8\t./darker.css', '32\t./index.html']
@@ -296,8 +296,8 @@
   </section>
 
   <section data-transition="none">
-    <pre><code class="hljs">
-  &gt;&gt;&gt; n, path = 2, 'small folder'
+    <pre style="font-size: 100%;"><code class="hljs"
+>  &gt;&gt;&gt; n, path = 2, 'small folder'
   &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
   &gt;&gt;&gt; lines[:2]
   ['8\t./darker.css', '32\t./index.html']
@@ -313,8 +313,8 @@
   </section>
 
   <section data-transition="none">
-    <pre><code class="hljs">
-  &gt;&gt;&gt; n, path = 2, 'small folder'
+    <pre style="font-size: 100%;"><code class="hljs"
+>  &gt;&gt;&gt; n, path = 2, 'small folder'
   &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
   &gt;&gt;&gt; lines[:2]
   ['8\t./darker.css', '32\t./index.html']
@@ -326,40 +326,39 @@
    ['912', './images/repr.jpg'],
    ['900', './.git/objects/20']]
   &gt;&gt;&gt; [name for size, name in nlargest(n, pairs)]
-      </code></pre>
+...   </code></pre>
   </section>
 
-  <section>
-    <div style="font-size: 150%; text-align: left">
-      <ul>
-        <li>
-          Catching bugs earlier<br/>
-          reduces task switching
-        </li>
-        <li class="fragment">
-          Acquire fluency faster
-        </li>
-        <li class="fragment">
-          Confidence in your code,
-          without concious efforts
-        </li>
-      </ul>
-    </div>
+  <section data-background="images/fluency tr.jpg">
+    <h1>Learn Faster</h1>
   </section>
 
+  <section data-transition="slide-in none-out" data-background="images/tasks tr.jpg">
+    <h1>Catch Bugs Earlier</h1>
+  </section>
+
+  <section data-transition="none-in slide-out" data-background="images/7pm2 tr.jpg">
+    <h1>Catch Bugs Earlier</h1>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
+    <h1>
+      Confidence in Your Code,<br/>
+      <span class="fragment">Without Concious Effort</span>
+    </h1>
+  </section>
 </section>
 
 
 <section>
-
   <section>
     <h1>
-      Objects & Representation
+      Objects Representation
     </h1>
   </section>
 
   <section>
-    <pre><code class="hljs" data-trim>
+    <pre style="font-size: 100%;"><code class="hljs" data-trim>
   [
     { "name": "Tyler Durden",
        "age": 35,
@@ -378,52 +377,60 @@
   </section>
 
   <section>
-    <pre><code class="hljs" data-trim>
+    <div style="font-size: 200%;">
+      A list of strings,<br/>
+      optimized for filtering items<br/> matching a regular expression
+    </div>
+    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
   "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
     </code></pre>
-    <pre class="fragment"><code class="hljs" data-trim>
+    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
   ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
     </code></pre>
   </section>
   
   <section>
-    <pre><code class="hljs" data-trim>
+    <div style="font-size: 200%;">
+      A dict with regex searchable string keys
+    </div>
+    <pre style="font-size: 100%;"><code class="hljs" data-trim>
+  # re searchable keys
+  "A\nB\n"
+
   # compact dict
   { 
     2: "My Key is B at offset 2"
     0: "My key is A at offest 0",
   }
-  # re searchable keys
-  "A\nB\n"
     </code></pre>
   </section>
 
   <section>
-    <pre><code class="hljs" data-trim>
+    <pre style="font-size: 100%;"><code class="hljs" data-trim>
+  "Brad Pitt\nMia Wallace\nTyler Durden\nUma Thurman\n"
   { 22: "Dead",
     35: "Alive",
     0: "Alive",
     10: "Alive" }
-  "Brad Pitt\nMia Wallace\nTyler Durden\nUma Thurman\n"
     </code></pre>
-    <pre class="fragment"><code class="hljs" data-trim>
+    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
   { "Tyler Durden": "Dead",
     "Uma Thurman": "Alive",
     "Brad Pitt": "Alive",
     "Mia Wallace": "Alive" }
     </code></pre>
     <span class="fragment">
-      <pre><code class="hljs" data-trim>
+      <pre style="font-size: 100%;"><code class="hljs" data-trim>
   "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
       </code></pre>
-      <pre><code class="hljs" data-trim>
+      <pre style="font-size: 100%;"><code class="hljs" data-trim>
   ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
       </code></pre>
     </span>
   </section>
 
   <section>
-    <pre><code class="hljs" data-trim>
+    <pre style="font-size: 100%;"><code class="hljs" data-trim>
   Counter({
     "Walking Dead": 19,
     "Alive": 7,
@@ -433,42 +440,66 @@
     </code></pre>
   </section>
 
-  <section>
-      <div style="font-size: 150%; text-align: left">
-        <ul>
-          <li>
-            Simple composable data structure.
-          </li>
-          <li class="fragment">
-            Representation counts <!-- you can read, write, imagine, and discuss -->
-          </li>
-          <li class="fragment">
-            Design seperation <!-- give DS simple API, and work on the complex impl seperatly-->
-          </li>
-        </ul>
-      </div>
-    </section>
-  
-</section>
+  <section data-background="images/fluency tr.jpg">
+    <h1>Use Standard Representation</h1>
+    <div style="font-size: 200%">
+      If you can read it, you can visualize it, think about it, discuss it with other developers.
+    </div>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
+    <h1>Use Familiar API</h1>
+  </section>
+ </section>
+
 
 
 <section>
-
   <section>
     <h1>
-      Standards & Composability
+      { }
     </h1>
   </section>
-<!-- I want to go to the beach and build sand castles -->
+
+  <section data-transition="slide-in fade-out">
+    <div style="font-size: 200%">
+      <p>A Developer thinking in c++</p>
+      <p>- "If we store that in a map..."</p>
+    </div>
+  </section>
+
+  <section data-transition="fade-in slide-out" data-background="images/priming tr.jpg">
+    <div style="font-size: 175%">
+      <p>Listener thinking: ~map...</p>
+      <p>~ "Why do we need the keys sorted?"</p>
+      <p>~ "Is there an implementation of frozen map?"</p>
+    </div>
+  </section>
+  
+  <section data-background="images/priming tr.jpg">
+    <div style="font-size: 200%">
+      <p>&nbsp;</p>
+      <p>A Developer thinking in Python</p>
+      <p>- "If we store that in a dictionary..."</p>
+    </div>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h1>
+      Composability
+    </h1>
+  </section>
   <section>
     <div>
-      <pre class="py3"><code class="hljs" data-trim>
+      <pre style="font-size: 100%"><code class="hljs" data-trim>
   def f(xs):
     return sorted(x / 2 for x in xs if (x % 2) == 0)
       </code></pre>
     </div>
     <div class="fragment">
-      <pre class="py3"><code class="hljs" data-trim>
+      <pre style="font-size: 100%"><code class="hljs" data-trim>
   def f(xs):
    return sorted(
      map(lambda x: x / 2,
@@ -477,7 +508,7 @@
       </code></pre>
     </div>
     <div class="fragment">
-      <pre class="py3"><code class="hljs" data-trim>
+      <pre style="font-size: 100%"><code class="hljs" data-trim>
   def f(xs):
     tmp = Vector()
     tmp.extend(filter(lambda x: (x % 2) == 0, xs))
@@ -489,8 +520,8 @@
   </section>
 
   <section>
-    <div style="font-size: 60%">
-      <pre class="py3"><code class="hljs" data-trim>
+    <div>
+      <pre style="font-size: 60%"><code class="hljs" data-trim>
 std::vector&lt;int&gt; firsts_sorted_by_second(
   const std::vector&lt;std::pair&lt;int, int&gt;&gt;& items
 ) {
@@ -500,9 +531,8 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     temp.begin(),
     temp.end(), 
     [](const int& a, const int& b
-  ) -> bool { 
-    return a.second > b.second; 
-  });
+      ) -> bool { return a.second > b.second; } 
+  );
 
   std::vector&lt;int&gt; results;
   results.reserve(temp.size());
@@ -548,7 +578,7 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 
   <section>
     <h1>
-      Simple is better than Complex
+      Simple is better than Complicated
     </h1>
   </section>
 
@@ -588,26 +618,6 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>
 
-  <section>
-    <h1>
-      Simple is better than Complex
-    </h1>
-  </section>
-
-  <section>
-    <div>
-      No Excpetions!<br/> Use shared pointers everywhere.
-    </div>
-    <div class="fragment">
-      <pre><code class="hljs" data-trim>
-  // pass shared pointer by reference
-  void f(shared_ptr&lt;Object&gt;& obj) 
-      </code></pre>
-    </div>
-    <span class="fragment">read</span><span class="fragment">, write</span><span class="fragment">, review</span><span class="fragment">, test</span><span class="fragment">,<br/>
-    debug</span><span class="fragment">, think</span><span class="fragment">, talk</span>
-  </section>
-
   <section data-background="images/pink.jpg">
   </section>
 
@@ -615,40 +625,97 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 
 <section>
   <section>
-    <div>
-      Pink Elephant, Eiffel Tower
-    </div>
-  </section>
-
-  <section>
     <h1>
       Prototyping
     </h1>
   </section>
 
   <section>
-    <div>
-      <ul>
-        <li>Development in Python x4 faster (+ref)</li>
-        <li>Impl the 2nd time is twice as fast</li>
-        <li>Total development time = 75%</li>
-      </ul>
+    <div style="font-size: 200%">
+      Prototype is a model<br/>
+      built to test a concept,<br/>
+      and to be learned from.
+    </div>
+  </section>
+
+  <section data-background="images/fluency tr.jpg">
+    <div style="font-size: 200%">
+      You write it once,<br/>
+      gaining experiance in both<br/>
+      understanding the problem, and<br/>
+      understanding a solution.
+    </div>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
+    <div style="font-size: 200%">
+      You write it again,<br/>
+      with less things to worry about<br/>
+      and attention for finer details.
     </div>
   </section>
 
   <section>
-      <div>
-        <p>Total development time will be faster, yey!</p>
-        <p>Other Benefits</p>
-        <ul>
-          <li>Forces a rewrite</li>
-          <li>Clarity & REadability</li>
-          <li>Maintainability</li>
-          <li>Bug Ratio</li>
-        </ul>
-      </div>
-    </section>
+    <div style="font-size: 200%">
+      <p>Improved Readability</p>
+      <p>Improved Maintainability</p>
+      <p>Less Bugs</p>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      TODO: graph<br/>
+      production code takes 100% future tasks 100%<br/>
+      ptorotype 75%, rewrite 50%, future tasks 50%
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <img class="plain" src="images/priming 256.png"></img>
+      <img class="plain" src="images/ironic 256.png"></img>
+  </section>
   
+  <section>
+    <div>
+      TODO: graph<br/>
+      production c++ code takes 100%<br/>
+      ptorotype 25%, rewrite 50%
+    </div>
+  </section>
+
+  <section>
+    <h1>
+      Static Type Checking
+    </h1>
+  </section>
+
+  <section data-background="images/fluency tr.jpg">
+    <div style="font-size: 200%">
+      Define types and structures before or after understanding the problem and solution?
+    </div>
+  </section>
+
+  <section data-background="images/tasks tr.jpg">
+    <div style="font-size: 200%">
+      Constant task switching between:<br/>
+      Coding and Type-defining
+    </div>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
+    <div style="font-size: 200%">
+      How many bits would<br/>
+      I like this integer to have?
+    </div>
+  </section>
+
+  <section data-background="images/tasks tr.jpg">
+    <div style="font-size: 200%">
+      What happens when you are wrong?
+    </div>
+  </section>  
 </section>
 
 <section>
@@ -660,26 +727,25 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 <section>
   <section>
     <div>
-      <pre>
-  +--+--+--+--+--+--+--+--+--+  +--+--+--+--+--+--+--+--+--+
-  |S                         |  |Sooooooooooooooooooo      |
-  +  +--+--+--+--+  +  +--+  +  +  +--+--+--+--+  + o+--+  +
-  |     |     |     |     |  |  |     |     |     | ooo |  |
-  +--+  +  +  +  +--+--+  +  +  +--+  +  +  +  +--+--+o +  +
-  |     |  |     |        |  |  |     |  |     | oooooo |  |
-  +  +--+  +--+--+  +--+--+  +  +  +--+  +--+--+ o+--+--+  +
-  |  |        |     |  |     |  |  |        | oooo|        |
-  +--+  +--+--+  +--+  +  +--+  +--+  +--+--+ o+--+  +--+--+
-  |     |           |        |  |     |       ooo |        |
-  +  +--+  +--+--+  +--+--+  +  +  +--+  +--+--+o +--+--+  +
-  |              |E          |  |              |E          |
-  +--+--+--+--+--+--+--+--+--+  +--+--+--+--+--+--+--+--+--+
-      </pre>
+      <pre style="font-size: 100%">
+ +--+--+--+--+--+--+--+--+--+  +--+--+--+--+--+--+--+--+--+
+ |S                         |  |Sooooooooooooooooooo      |
+ +  +--+--+--+--+  +  +--+  +  +  +--+--+--+--+  + o+--+  +
+ |     |     |     |     |  |  |     |     |     | ooo |  |
+ +--+  +  +  +  +--+--+  +  +  +--+  +  +  +  +--+--+o +  +
+ |     |  |     |        |  |  |     |  |     | oooooo |  |
+ +  +--+  +--+--+  +--+--+  +  +  +--+  +--+--+ o+--+--+  +
+ |  |        |     |  |     |  |  |        | oooo|        |
+ +--+  +--+--+  +--+  +  +--+  +--+  +--+--+ o+--+  +--+--+
+ |     |           |        |  |     |       ooo |        |
+ +  +--+  +--+--+  +--+--+  +  +  +--+  +--+--+o +--+--+  +
+ |              |E          |  |              |E          |
+ +--+--+--+--+--+--+--+--+--+  +--+--+--+--+--+--+--+--+--+ </pre>
     </div>
   </section>
 
   <section>
-    <div>
+    <div style="font-size: 150%">
       <table width=100%>
         <tr style="border-top: thick solid black;">
           <td>Try</td>
@@ -701,14 +767,14 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
         </tr>
       </table>
     </div>
-    <div style="font-size: 50%">
+    <div style="font-size: 75%">
       <em>* SLOC exludes comments, empty lines, and brancelets.</em>
     </div>
   </section>
 
 
   <section>
-    <div>
+    <div style="font-size: 200%">
       <table width=100%>
         <tr style="border-top: thick solid black;">
           <td>Try</td>
@@ -730,14 +796,14 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
         </tr>
       </table>
     </div>
-    <div style="font-size: 50%">
+    <div style="font-size: 75%">
       <em>* SLOC exludes comments, empty lines, and brancelets.</em>
     </div>
   </section>
 
     <section>
-    <div style="font-size: 150%">
-      Both version have the same:
+    <div style="font-size: 200%">
+      <p>Both version have the same:</p>
       <ul style="text-align: left">
         <li>Algorithm</li>
         <li>Data structure</li>
@@ -748,7 +814,7 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
   </section>
 
   <section>
-    <pre class="py3file"><code class="hljs" data-trim>
+    <pre style="font-size: 80%"><code class="hljs" data-trim>
 def calc_path(prevs, point):
     point = prevs[point]
     while point in prevs:
@@ -757,7 +823,7 @@ def calc_path(prevs, point):
 
 points = set(calc_path(prevs, end_point))
     </code></pre>
-    <pre class="cppfile"><code class="hljs" data-trim>
+    <pre style="font-size: 80%"><code class="hljs" data-trim>
 set&lt;Point&gt; calc_path(map&lt;Point, Point&gt; prevs, Point point) {
     set&lt;Point&gt; results;
     point = prevs[point];
@@ -779,31 +845,43 @@ auto points = calc_path(prevs, end_point);
   </section>
 
   <section>
-    <div style="font-size: 200%">
+    <div style="font-size: 250%">
       What was I <em>Thinking</em> About?
     </div>
   </section>
 
   <section>
-    <div style="font-size: 200%">
-      [Image with all 5 things]
+    <div>
+      <img class="plain" src="images/priming 256.png"></img>
+      <img class="plain" src="images/7pm2 256.png"></img>
     </div>
+      <img class="plain" src="images/ironic 256.png"></img>
+      <img class="plain" src="images/tasks 256.png"></img>
+      <img class="plain" src="images/fluency 256.png"></img>
   </section>
-
-  <section>
-    <div style="font-size: 200%">
-      One simply <em>can not</em> compete with their own self
-      <em>thinking</em> in Python
-    </div>
-  </section>
-
 </section>
 
 
 <section>
-  <h1>Thank You</h1>
+  <h1>Summary</h1>
 </section>    
 
+
+<section>
+  <div>
+    <img class="plain" src="images/priming 256.png"></img>
+    <img class="plain" src="images/7pm2 256.png"></img>
+    <img class="plain" src="images/ironic 256.png"></img>
+    <img class="plain" src="images/tasks 256.png"></img>
+    <img class="plain" src="images/fluency 256.png"></img>
+  </div>
+  <h1 style="font-size: 400%">Thank You</h1>
+  <div style="font-size: 150%; text-align: left;">
+    <p>Twitter: @DudeJohnny1219</p>
+    <p>email: johnny.dude@gmail.com</p>
+  </div>
+</section>    
+  
 <!--
 
   * Immediate Reaction (maybe feedback) *
@@ -837,6 +915,10 @@ Immediate
 
       // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        width: 1920,
+        height: 1080,
+
+        margin: 0.01,
         controls: true,
         progress: true,
         history: true,
