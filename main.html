@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>How Thinking in Python Made Me a Better c++ Developer - Johnny D.</title>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
     <link rel="stylesheet" href="css/white.css" id="theme">
+    <link rel="stylesheet" href="css/pygment.css">
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="css/kimbie.light.css">
     <!-- Printing and PDF exports -->
@@ -253,20 +255,18 @@
   </section>
 
   <section>
-    <pre style="font-size: 100%"><code class="hljs" data-trim>
-  def get_biggest_files(n, path='.'):
-      lines = system(f'du -a {path}').splitlines()
-      pairs = [line.split('\t') for line in lines]
-      return [name for size, name in nlargest(n, pairs)]
-    </code></pre>
+    <div style="font-size: 180%;"><pre class="hll">  <span></span><span class="k">def</span> <span class="nf">get_biggest_files</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+      <span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+      <span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+      <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span></pre>
+    </div>
   </section>
 
   <section data-transition="slide-in none-out">
-    <pre style="font-size: 100%;"><code class="hljs"
->  &gt;&gt;&gt; n, path = 2, 'small folder'
-  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
-  &gt;&gt;&gt; lines[:2]
-  ['8\t./darker.css', '32\t./index.html']
+    <div style="font-size: 200%;"><pre class="hll"><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;small folder&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;8\t./darker.css&#39;, &#39;32\t./index.html&#39;]</span>
 
 
 
@@ -275,58 +275,59 @@
 
 
 
-    </code></pre>
+
+</pre>
   </section>
 
   <section data-transition="none">
-    <pre style="font-size: 100%;"><code class="hljs"
->  &gt;&gt;&gt; n, path = 2, 'small folder'
-  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
-  &gt;&gt;&gt; lines[:2]
-  ['8\t./darker.css', '32\t./index.html']
-  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
-  &gt;&gt;&gt; pairs[:2]
-  [['8', './darker.css'], ['32', './index.html']]
+    <div style="font-size: 200%;"><pre class="hll"><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;small folder&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;8\t./darker.css&#39;, &#39;32\t./index.html&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[[&#39;8&#39;, &#39;./darker.css&#39;], [&#39;32&#39;, &#39;./index.html&#39;]]</span>
 
 
 
 
 
-    </code></pre>
+
+</pre>
   </section>
 
   <section data-transition="none">
-    <pre style="font-size: 100%;"><code class="hljs"
->  &gt;&gt;&gt; n, path = 2, 'small folder'
-  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
-  &gt;&gt;&gt; lines[:2]
-  ['8\t./darker.css', '32\t./index.html']
-  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
-  &gt;&gt;&gt; pairs[:2]
-  [['8', './darker.css'], ['32', './index.html']]
-  &gt;&gt;&gt; nlargest(n, pairs)
-  [['96', './.git/objects/d1/31af6800b725b05b...'],
-   ['912', './images/repr.jpg'],
-   ['900', './.git/objects/20']]
+    <div style="font-size: 200%;"><pre class="hll"><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;small folder&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;8\t./darker.css&#39;, &#39;32\t./index.html&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[[&#39;8&#39;, &#39;./darker.css&#39;], [&#39;32&#39;, &#39;./index.html&#39;]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)</span>
+<span class="go">[[&#39;96&#39;, &#39;./.git/objects/d1/31af6800b725b05b...&#39;],</span>
+<span class="go">  [&#39;912&#39;, &#39;./images/repr.jpg&#39;],</span>
+<span class="go">  [&#39;900&#39;, &#39;./.git/objects/20&#39;]]</span>
 
-      </code></pre>
+
+</pre>
   </section>
 
   <section data-transition="none">
-    <pre style="font-size: 100%;"><code class="hljs"
->  &gt;&gt;&gt; n, path = 2, 'small folder'
-  &gt;&gt;&gt; lines = system(f'du -a {path}').splitlines()
-  &gt;&gt;&gt; lines[:2]
-  ['8\t./darker.css', '32\t./index.html']
-  &gt;&gt;&gt; pairs = [line.split('\t') for line in lines]
-  &gt;&gt;&gt; pairs[:2]
-  [['8', './darker.css'], ['32', './index.html']]
-  &gt;&gt;&gt; nlargest(n, pairs)
-  [['96', './.git/objects/d1/31af6800b725b05b...'],
-   ['912', './images/repr.jpg'],
-   ['900', './.git/objects/20']]
-  &gt;&gt;&gt; [name for size, name in nlargest(n, pairs)]
-...   </code></pre>
+    <div style="font-size: 200%;"><pre class="hll"><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;small folder&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;8\t./darker.css&#39;, &#39;32\t./index.html&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[[&#39;8&#39;, &#39;./darker.css&#39;], [&#39;32&#39;, &#39;./index.html&#39;]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)</span>
+<span class="go">[[&#39;96&#39;, &#39;./.git/objects/d1/31af6800b725b05b...&#39;],</span>
+<span class="go">  [&#39;912&#39;, &#39;./images/repr.jpg&#39;],</span>
+<span class="go">  [&#39;900&#39;, &#39;./.git/objects/20&#39;]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span>
+<span class="gp">...</span></pre>
+    </div>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -358,22 +359,21 @@
   </section>
 
   <section>
-    <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  [
-    { "name": "Tyler Durden",
-       "age": 35,
-       "sibling":[] },
-    { "name": "Brad Pitt",
-       "age": 56,
-       "sibling":["Doug", "Julie"] },
-    { "name": "Mia Wallace",
-       "age": 25,
-       "sibling":[] },
-    { "name": "Uma Thurman",
-      "age": 49,
-      "sibling":[...] },
-  ]
-      </code></pre>
+    <div style="font-size: 200%;"><pre class="hll"><span></span><span class="p">[</span>
+  <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+     <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+     <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span><span class="s2">&quot;Doug&quot;</span><span class="p">,</span> <span class="s2">&quot;Julie&quot;</span><span class="p">]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+     <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span>
+    <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span><span class="o">...</span><span class="p">]</span> <span class="p">},</span>
+<span class="p">]</span></pre>
+    </div>
   </section>
 
   <section>
@@ -381,28 +381,25 @@
       A list of strings,<br/>
       optimized for filtering items<br/> matching a regular expression
     </div>
-    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
-  "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
-    </code></pre>
-    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
-  ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
-    </code></pre>
+    <div style="font-size: 180%;" class="fragment"><pre class="hll"><span></span><span class="s2">&quot;Tyler Durden</span><span class="se">\n</span><span class="s2">Brad Pitt</span><span class="se">\n</span><span class="s2">Mia Wallace</span><span class="se">\n</span><span class="s2">Uma Thurman</span><span class="se">\n</span><span class="s2">&quot;</span></pre>
+    </div>
+    <div style="font-size: 180%;" class="fragment"><pre class="hll"><span class="p">[</span><span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">]</span></pre>
+    </div>
   </section>
   
   <section>
     <div style="font-size: 200%;">
       A dict with regex searchable string keys
     </div>
-    <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  # re searchable keys
-  "A\nB\n"
+    <div style="font-size: 180%;"><pre class="hll"><span class="c1"># re searchable keys</span>
+<span class="s2">&quot;A</span><span class="se">\n</span><span class="s2">B</span><span class="se">\n</span><span class="s2">&quot;</span>
 
-  # compact dict
-  { 
-    2: "My Key is B at offset 2"
-    0: "My key is A at offest 0",
-  }
-    </code></pre>
+<span class="c1"># compact dict</span>
+<span class="p">{</span> 
+  <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;My Key is B at offset 2&quot;</span>
+  <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;My key is A at offest 0&quot;</span><span class="p">,</span>
+<span class="p">}</span></pre>
+    </div>
   </section>
 
   <section>
