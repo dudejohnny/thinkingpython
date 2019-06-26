@@ -652,7 +652,7 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>
 
-  <section data-background="graphs02.svg">
+  <section data-background="images/prototype01.svg">
   </section>
 
   <section>
@@ -663,7 +663,7 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>
 
-  <section data-background="graphs03.svg">
+  <section data-background="images/prototype02.svg">
   </section>
 
   <section>
@@ -725,7 +725,7 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>  
 
-  <section data-background="graphs04.svg">
+  <section data-background="images/prototype03.svg">
   </section>
 
   <section>
@@ -761,6 +761,20 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>
 
+  <section data-background="images/experiment01.svg">
+  </section>
+  <section data-background="images/experiment02.svg">
+  </section>
+  <section data-background="images/experiment03.svg">
+  </section>
+  <section data-background="images/experiment04.svg">
+  </section>
+  <section data-background="images/experiment05.svg">
+  </section>
+  <section data-background="images/experiment06.svg">
+  </section>
+
+<!--
   <section>
     <div style="font-size: 150%">
       <table width=100%>
@@ -818,20 +832,22 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
     </div>
   </section>
 
-    <section>
-    <div style="font-size: 200%">
-      <p>Both version have the same:</p>
+  <section>
+    <h1>
+    <div style="text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">
       <ul style="text-align: left">
-        <li>Algorithm</li>
-        <li>Data structure</li>
-        <li>Function</li>
-        <li>Variable names</li>
+        <li>Same Algorithm</li>
+        <li>Same Data structure</li>
+        <li>Same Function</li>
+        <li>Same Variable names</li>
       </ul>
-    </div>
+    </div></h1>
+    <div>&nbsp;</div>
   </section>
+-->
 
   <section>
-    <pre style="font-size: 80%"><code class="hljs" data-trim>
+    <pre style="font-size: 75%"><code class="hljs" data-trim>
 def calc_path(prevs, point):
     point = prevs[point]
     while point in prevs:
@@ -840,16 +856,14 @@ def calc_path(prevs, point):
 
 points = set(calc_path(prevs, end_point))
     </code></pre>
-    <pre style="font-size: 80%"><code class="hljs" data-trim>
+    <pre style="font-size: 75%"><code class="hljs" data-trim>
 set&lt;Point&gt; calc_path(map&lt;Point, Point&gt; prevs, Point point) {
     set&lt;Point&gt; results;
     point = prevs[point];
     while (prevs.find(point) != prevs.end()) {
         results.insert(point);
-        point = prevs[point];
-    }
-    return results;
-}
+        point = prevs[point]; }
+    return results; }
 
 auto points = calc_path(prevs, end_point);
     </code></pre>
