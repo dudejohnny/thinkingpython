@@ -1,15 +1,9 @@
 def f(xs):
-  return sorted(x / 2 for x in xs if (x % 2) == 0)
+    return [x % 3 for x in sorted(xs) if x < 120]
 
 def f(xs):
-  return sorted(
-    map(lambda x: x / 2,
-      filter(lambda x: (x % 2) == 0,
-        xs)))
-
-def f(xs):
-  tmp = Vector()
-  tmp.extend(filter(lambda x: (x % 2) == 0, xs))
-  tmp.map(lamnda x: x / 2)
-  tmp.sort()
-  return tmp
+    ys = list(xs)
+    ys.sort()
+    zs = filter(lambda y: y < 120, ys)
+    zs.map(lambda x: x % 3)
+    return zs
