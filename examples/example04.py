@@ -17,7 +17,15 @@
   0: "Alive",
   10: "Alive" }
 
-  { "Tyler Durden": "Dead",
+{ "Tyler Durden": "Dead",
   "Uma Thurman": "Alive",
   "Brad Pitt": "Alive",
   "Mia Wallace": "Alive" }
+
+Counter({
+  "Walking Dead": 19,
+  "Alive": 7,
+  "Dead": 2,
+  "Not Born": 1,
+})
+

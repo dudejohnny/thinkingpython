@@ -403,38 +403,33 @@
   </section>
 
   <section>
-    <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  "Brad Pitt\nMia Wallace\nTyler Durden\nUma Thurman\n"
-  { 22: "Dead",
-    35: "Alive",
-    0: "Alive",
-    10: "Alive" }
-    </code></pre>
-    <pre style="font-size: 100%;" class="fragment"><code class="hljs" data-trim>
-  { "Tyler Durden": "Dead",
-    "Uma Thurman": "Alive",
-    "Brad Pitt": "Alive",
-    "Mia Wallace": "Alive" }
-    </code></pre>
+      <div style="font-size: 200%;"><pre class="hll"><span class="s2">&quot;Brad Pitt</span><span class="se">\n</span><span class="s2">Mia Wallace</span><span class="se">\n</span><span class="s2">Tyler Durden</span><span class="se">\n</span><span class="s2">Uma Thurman</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">{</span> <span class="mi">22</span><span class="p">:</span> <span class="s2">&quot;Dead&quot;</span><span class="p">,</span>
+  <span class="mi">35</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span><span class="p">,</span>
+  <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span> <span class="p">}</span></pre>
+      </div>
+      <div style="font-size: 200%;" class="fragment"><pre class="hll"><span class="p">{</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">:</span> <span class="s2">&quot;Dead&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span> <span class="p">}</span></pre>
+    </div>
     <span class="fragment">
-      <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  "Tyler Durden\nBrad Pitt\nMia Wallace\nUma Thurman\n"
-      </code></pre>
-      <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  ["Tyler Durden", "Brad Pitt", "Mia Wallace", "Uma Thurman"]
-      </code></pre>
+      <div style="font-size: 180%;"><pre class="hll"><span></span><span class="s2">&quot;Tyler Durden</span><span class="se">\n</span><span class="s2">Brad Pitt</span><span class="se">\n</span><span class="s2">Mia Wallace</span><span class="se">\n</span><span class="s2">Uma Thurman</span><span class="se">\n</span><span class="s2">&quot;</span></pre>
+      </div>
+      <div style="font-size: 180%;"><pre class="hll"><span class="p">[</span><span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">]</span></pre>
+      </div>
     </span>
   </section>
 
   <section>
-    <pre style="font-size: 100%;"><code class="hljs" data-trim>
-  Counter({
-    "Walking Dead": 19,
-    "Alive": 7,
-    "Dead": 2,
-    "Not Born": 1,
-  })
-    </code></pre>
+    <div style="font-size: 200%;"><pre class="hll"><span class="n">Counter</span><span class="p">({</span>
+  <span class="s2">&quot;Walking Dead&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="s2">&quot;Alive&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+  <span class="s2">&quot;Dead&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="s2">&quot;Not Born&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">})</span></pre>
+    </div>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -489,60 +484,42 @@
     </h1>
   </section>
   <section>
-    <div>
-      <pre style="font-size: 100%"><code class="hljs" data-trim>
-  def f(xs):
-    return sorted(x / 2 for x in xs if (x % 2) == 0)
-      </code></pre>
+    <div style="font-size: 200%"><pre class="hll"><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></pre>
     </div>
-    <div class="fragment">
-      <pre style="font-size: 100%"><code class="hljs" data-trim>
-  def f(xs):
-   return sorted(
-     map(lambda x: x / 2,
-      filter(lambda x: (x % 2) == 0,
-        xs)))
-      </code></pre>
-    </div>
-    <div class="fragment">
-      <pre style="font-size: 100%"><code class="hljs" data-trim>
-  def f(xs):
-    tmp = Vector()
-    tmp.extend(filter(lambda x: (x % 2) == 0, xs))
-    tmp.map(lamnda x: x / 2)
-    tmp.sort()
-    return tmp
-      </code></pre>
+    <div style="font-size: 200%" class="fragment"><pre class="hll"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">()</span>
+    <span class="n">tmp</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="p">))</span>
+    <span class="n">tmp</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">tmp</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">tmp</span></pre>    
     </div>
   </section>
 
   <section>
-    <div>
-      <pre style="font-size: 60%"><code class="hljs" data-trim>
-std::vector&lt;int&gt; firsts_sorted_by_second(
-  const std::vector&lt;std::pair&lt;int, int&gt;&gt;& items
-) {
-  std::vector&lt;std::pair&lt;int, int&gt;&gt; temp(items);
-
-  std::sort(
-    temp.begin(),
-    temp.end(), 
-    [](const int& a, const int& b
-      ) -> bool { return a.second > b.second; } 
-  );
-
-  std::vector&lt;int&gt; results;
-  results.reserve(temp.size());
-  std::transform(
-    temp.begin(),
-    temp.end(),
-    std::back_inserter(results),
-    [](auto const& pair){ return pair.first / 2; }
-  );
-
-  return results;
-}
-      </code></pre>
+    <div style="font-size: 100%"><pre class="hll"><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">firsts_sorted_by_second</span><span class="p">(</span>
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">items</span>
+    <span class="p">)</span> <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">temp</span><span class="p">(</span><span class="n">items</span><span class="p">);</span>
+    
+      <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> 
+        <span class="p">[](</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span>
+          <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span> 
+      <span class="p">);</span>
+    
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
+      <span class="n">results</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+        <span class="n">temp</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">results</span><span class="p">),</span>
+        <span class="p">[](</span><span class="k">auto</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">pair</span><span class="p">){</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="p">}</span>
+      <span class="p">);</span>
+    
+      <span class="k">return</span> <span class="n">results</span><span class="p">;</span>
+    <span class="p">}</span></pre>    
     </div>
   </section>
 
@@ -580,38 +557,23 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
   </section>
 
   <section>
-    <div>
-      <pre><code class="hljs" data-trim>
-  void f(Object obj)             // pass by value
-  void f(Object& obj)            // pass by reference
-  void f(Object* obj)            // pass by raw pointer
-  void f(Object&& obj)           // pass by rvalue
-  void f(shared_ptr&lt;Object&gt; obj) // pass by shared pointer
-  void f(unique_ptr&lt;Object&gt; obj) // pass by unique pointer
-      </code></pre>
+    <div style="font-size: 180%"><pre class="hll"><span></span><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span>             <span class="c1">// pass by value</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;</span> <span class="n">obj</span><span class="p">)</span>            <span class="c1">// pass by reference</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>            <span class="c1">// pass by raw pointer</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span> <span class="n">obj</span><span class="p">)</span>           <span class="c1">// pass by rvalue</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// pass by shared pointer</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// pass by unique pointer</span></pre>
     </div>
-    <div class="fragment">
-      <pre><code class="hljs" data-trim>
-  void f(shared_ptr&lt;Object&gt;  or unique_ptr&lt;Object&gt; obj) // ??
-      </code></pre>
+    <div style="font-size: 180%" class="fragment"><pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="c1">or</span> <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// ??</span></pre>
     </div>
-    <div class="fragment">
-      <pre><code class="hljs" data-trim>
-  void f(const Object* obj)       // object is immutable
-  void f(Object* const obj)       // pointer is immutable
-  void f(const Object* const obj) // both are immutable
-      </code></pre>
+    <div style="font-size: 180%" class="fragment"><pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="k">const</span> <span class="n">Object</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>       <span class="c1">// object is immutable</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span><span class="o">*</span> <span class="k">const</span> <span class="n">obj</span><span class="p">)</span>       <span class="c1">// pointer is immutable</span>
+<span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="k">const</span> <span class="n">Object</span><span class="o">*</span> <span class="k">const</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// both are immutable</span></pre>
     </div>
-    <div class="fragment">
-      <pre><code class="hljs" data-trim>
-  void f(Object const* obj)       // what is immutable?
-      </code></pre>
+    <div style="font-size: 180%" class="fragment"><pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span> <span class="k">const</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>       <span class="c1">// what is immutable?</span></pre>
     </div>
-    <div class="fragment">
-      <pre><code class="hljs" data-trim>
-  void f(shared_ptr&lt;Object&gt;& obj) // pass shared pointer
-                                  // by reference
-      </code></pre>
+    <div style="font-size: 180%" class="fragment"><pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&amp;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// pass shared pointer</span>
+                                <span class="c1">// by reference</span></pre>
     </div>
   </section>
 
@@ -847,26 +809,24 @@ std::vector&lt;int&gt; firsts_sorted_by_second(
 -->
 
   <section>
-    <pre style="font-size: 75%"><code class="hljs" data-trim>
-def calc_path(prevs, point):
-    point = prevs[point]
-    while point in prevs:
-        yield point
-        point = prevs[point]
+    <div style="font-size: 150%"><pre class="hll"><span></span><span class="kt">set</span><span class="o">&lt;</span><span class="kt">Point</span><span class="o">&gt;</span> <span class="n">calc_path</span><span class="p">(</span><span class="kt">map</span><span class="o">&lt;</span><span class="kt">Point</span><span class="p">,</span> <span class="kt">Point</span><span class="o">&gt;</span> <span class="n">prevs</span><span class="p">,</span> <span class="kt">Point</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">set</span><span class="o">&lt;</span><span class="kt">Point</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="n">prevs</span><span class="p">[</span><span class="n">point</span><span class="p">];</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">prevs</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">point</span><span class="p">)</span> <span class="o">!=</span> <span class="n">prevs</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">results</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">point</span><span class="p">);</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">prevs</span><span class="p">[</span><span class="n">point</span><span class="p">];</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">results</span><span class="p">;</span> <span class="p">}</span>
 
-points = set(calc_path(prevs, end_point))
-    </code></pre>
-    <pre style="font-size: 75%"><code class="hljs" data-trim>
-set&lt;Point&gt; calc_path(map&lt;Point, Point&gt; prevs, Point point) {
-    set&lt;Point&gt; results;
-    point = prevs[point];
-    while (prevs.find(point) != prevs.end()) {
-        results.insert(point);
-        point = prevs[point]; }
-    return results; }
+<span class="k">auto</span> <span class="n">points</span> <span class="o">=</span> <span class="n">calc_path</span><span class="p">(</span><span class="n">prevs</span><span class="p">,</span> <span class="n">end_point</span><span class="p">);</span></pre>
+    </div>
+    <div style="font-size: 150%"><pre class="hll"><span></span><span class="k">def</span> <span class="nf">calc_path</span><span class="p">(</span><span class="n">prevs</span><span class="p">,</span> <span class="n">point</span><span class="p">):</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="n">prevs</span><span class="p">[</span><span class="n">point</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">prevs</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">point</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">prevs</span><span class="p">[</span><span class="n">point</span><span class="p">]</span>
 
-auto points = calc_path(prevs, end_point);
-    </code></pre>
+<span class="n">points</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">calc_path</span><span class="p">(</span><span class="n">prevs</span><span class="p">,</span> <span class="n">end_point</span><span class="p">))</span></pre>
+    </div>
   </section>
 
   <section>
