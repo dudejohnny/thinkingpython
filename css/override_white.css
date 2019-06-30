@@ -42,6 +42,7 @@
   font-size: 40px;
   font-style: italic;
   font-weight: normal;
+  text-align: left;
   color: #0060B0;
   position: fixed;
   bottom: 10px;
@@ -49,6 +50,18 @@
   padding: 0;
   margin: 0;
 }
+
 .reveal div.footer a {
+  color: #0060B0;
+}
+
+.reveal div.bitly {
+  font-size: 48px;
+  font-weight: normal;
+  text-align: right;
+  color: #0060B0;
+}
+
+.reveal div.bitly a {
   color: #0060B0;
 }

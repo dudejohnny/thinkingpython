@@ -1,9 +1,10 @@
 def f(xs):
-    return [x % 3 for x in sorted(xs) if x < 120]
+    return [str(x) for x in sorted(xs) if (x % 3) == 0]
+
 
 def f(xs):
     ys = list(xs)
-    ys.sort()
-    zs = filter(lambda y: y < 120, ys)
-    zs.map(lambda x: x % 3)
-    return zs
+    sort(ys)
+    zs = filter(lambda y: (y % 3) == 0, ys)
+    results = map(str, zs)
+    return results

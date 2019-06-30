@@ -5,10 +5,8 @@
     <title>How Thinking in Python Made Me a Better c++ Developer - Johnny D.</title>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
     <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
-    <link rel="stylesheet" href="css/white.css" id="theme">
+    <link rel="stylesheet" href="css/override_white.css" id="theme">
     <link rel="stylesheet" href="css/pygment.css">
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="css/kimbie.light.css">
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
@@ -29,109 +27,89 @@
   This part is reindented from 0! 
 ------------------------------------------------------------>
 
-
-
-<!--
-  Nobuko Comments
-
-  - Why is it better to think in Python and then in c++.
-
-  - Is different languages like changing lanses.
-
-
- Sections
-  Psychology
-  1. pink elephant
-  2. priming
-  3. memory capacity
-  4. task switching
-  5. fluency
-
-
- 1 2 3 4 5 
-     X X X bigest files
-   X X X   proxy -> prototype -> faster, less bugs, readability, (7+-2) clarity
-     X X X object representation
- X X     X dict / mapping / dense/sparse/small/key-dist/key-size/value-size (prototyping will help you move faster, when you get to the problem of chosing a data-structure it will be isolated)
- X X X     shared-pointers
-
-[2] introduction
-[4] psychology
-[5] biggest files
-[5] proxy+prototype
-[2] object representation
-[2] dict
-[2] shared-pointers
-[3] my experiment
-[2] ending
-
-
-* take-aways
-  - Understand how your brain works and work with it
-  - Prototype
-  - execute code as you write it
-  - start with simple data structures that everyone is fluent with.
-  - use vocabulary that does not destract you from the problem.
-
--->
-
+<!------------------
+  Section 0 - Title
+-------------------->
 <section>
-  <div>&nbsp;<br/>&nbsp;</div>
-  <h1>
-    How Thinking in<br/>
-    Python Made Me a Better<br/>
-    Software Engineer
-  </h1>
-  <p>
-    EuroPython 2019<br/>
-    Johnny Dude
-  </p>
-  <div class="footer">    <a href="">http://somewhere/ThinkingInPython</a>
-  </div>
-  <aside class="notes">
-    <p>Thank you all for coming.</p>
+  <div style="height: 700px;">
+    <h1>
+      How Thinking in<br/>
+      Python Made Me a Better<br/>
+      Software Engineer
+    </h1>
     <p>
-      I want to start by thanking the organizers of EuroPython.
-      This is actually my first EuroPython,
-      it has been awesome so far,
-      and I hope you are all enjoying it too.
+      EuroPython 2019<br/>
+      Johnny Dude
     </p>
+  </div>
+  <div class="bitly">
+    <a href="" style="font-size:200%">bit.ly/XXXXXX</a>
+  </div>
+  <!-- NOTES -->
+  <aside class="notes">
+    <ol>
+      <li>Thank you all for coming.</li>
+      <li>I am very excited to talk about</li>
+    </ol>
   </aside>
 </section>
 
 <section>
+  <div style="height: 640px;">
     <h1>Hi, I'm Johnny Dude</h1>
     <table width=100%>
-    <tr>
-      <td width=25%>
-        <img class="plain" src="images/johnny_round.png">
-        </img>
-      </td>
-      <td width=75%>
-        <div style="text-align: center;">
-          <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
-          <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
-          <p>Using Python at work since 2005</p>
-          <p>I use Python for <em>prototyping</em></p>
-          <p>Responsible for c++ <em>production</em> code</p>
-          <p>This is my first EuroPython talk</p>
-        </div>
-      </td>
-    </tr>
-  </table>
+      <tr>
+        <td width=25%>
+          <img class="plain" src="images/johnny_round.jpg">
+          </img>
+        </td>
+        <td width=75%>
+          <div style="text-align: center;">
+            <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
+            <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
+            <p>Using Python at work since 2005</p>
+            <p>I use Python for <em>prototyping</em></p>
+            <p>Responsible for c++ <em>production</em> code</p>
+            <p>This is my first EuroPython talk</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="bitly">
+    &nbsp;<br/>
+    <a href="" style="font-size:200%">bit.ly/XXXXXX</a>
+  </div>
+  <!-- NOTES -->
   <aside class="notes">
-    <p>My name is Johnny <b>Dude</b></p>
-    <p>This <b>is</b> my real name</p>
-    <p>I work at Toga Networks</p>
-    <p> TODO </p>
+    <ol>
+      <li>My name is Johnny Dude</li>
+      <li>This is my real name</li>
+      <li>I work at Toga Networks</li>
+      <li>I love Python</li>
+    </ol>
   </aside>
 </section>
 
 
+<!------------------
+  Table of Contents
+-------------------->
+<section style="font-size:250%">
+  <ol>
+    <li>Psychological concepts</li>
+    <li>How this relates to the<br/> development processes</li>
+    <li>Experiment<br/>(Non scientific)</li>
+  </ol>
+</section>
+
+
+<!-----------------------------------
+  Section 1 - Psychological Concepts
+------------------------------------->
 <section>
   <h1>Psychological Concepts</h1>
 </section>
-
 
 <section>
   <section data-background="images/pink.jpg">
@@ -185,6 +163,9 @@
       conscious guidance or intention<br/>
     </div>
     <div class="footer">
+      <a href="https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8OA">
+        * Thinking Fast and Slow
+      </a><br/>
       <a href="https://en.wikipedia.org/wiki/Priming_(psychology)">
         * The Priming Effect
       </a>
@@ -209,8 +190,9 @@
 
   <section data-background="images/fluency tr.jpg">
     <div style="font-size: 250%">
-      Fluency<br/>
-      TODO: write something about it
+      Fluency is the ability<br/>
+      to do an activity with little, or<br/>
+      no conscious effort
     </div>
     <div class="footer">
       <a href=""><em>* TODO Reference Missing</em></a>
@@ -229,13 +211,15 @@
 </section>
 
 
+<!---------------------
+  Section 1 - Examples
+----------------------->
 <section>
   <h1>
-    How this Relates to<br/>
+    How This Relates to<br/>
     the Development Processes
   </h1>
 </section>
-
 
 <section>
   <section>
@@ -244,15 +228,14 @@
     </h1>
   </section>
 
-  <section>
-    TODO: idle image or clip
+  <section data-background-video="images/idle.mp4" data-background-size="contain">
   </section>
 
   <section>
-    <div style="font-size: 200%;"><pre class="hll">  <span></span><span class="k">def</span> <span class="nf">get_biggest_files</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
-      <span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-      <span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-      <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span></pre>
+    <div style="font-size: 195%;"><pre class="hll"> <span></span><span class="k">def</span> <span class="nf">get_biggest_files</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+     <span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+     <span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+     <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span></pre>
     </div>
   </section>
 
@@ -325,22 +308,22 @@
   </section>
 
   <section data-background="images/fluency tr.jpg">
-    <h1>Learn Faster</h1>
+    <div style="font-size: 250%;">
+      Learn faster
+    </div>
   </section>
 
   <section data-background="images/tasks tr.jpg">
-    <h1>Catch Bugs Earlier</h1>
+    <div style="font-size: 250%;">
+      Catch bugs earlier
+    </div>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
-    <h1>Catch Bugs Earlier</h1>
-  </section>
-
-  <section data-background="images/7pm2 tr.jpg">
-    <h1>
-      Confidence in Your Code,<br/>
-      <span class="fragment">Without Concious Effort</span>
-    </h1>
+    <div style="font-size: 250%;">
+      Confidence that your code works,<br/>
+      <span class="fragment">without concious effort</span>
+    </div>
   </section>
 </section>
 
@@ -348,7 +331,7 @@
 <section>
   <section>
     <h1>
-      Objects Representation
+      Object's API<br/> & Representation
     </h1>
   </section>
 
@@ -419,7 +402,7 @@
   <section data-background="images/fluency tr.jpg">
     <h1>Use Standard Representation</h1>
     <div style="font-size: 200%">
-      If you can read it, you can visualize it, think about it, discuss it with other developers.
+      If you can read it, you can visualize it, think about it, discuss it with other developers
     </div>
   </section>
 
@@ -439,15 +422,22 @@
  </section>
 
 
-
 <section>
   <section>
     <h1>
       { }
     </h1>
   </section>
+  
+  <section data-background="images/fluency tr.jpg">
+    <div style="font-size: 200%">
+      <p>&nbsp;</p>
+      <p>A Developer thinking in Python</p>
+      <p>- "If we store that in a dictionary..."</p>
+    </div>
+  </section>
 
-  <section>
+  <section data-background="images/priming tr.jpg">
     <div style="font-size: 200%">
       <p>A Developer thinking in c++</p>
       <p>- "If we store that in a map..."</p>
@@ -461,89 +451,66 @@
       <p>~ "Is there an implementation of frozen map?"</p>
     </div>
   </section>
-  
-  <section data-background="images/priming tr.jpg">
-    <div style="font-size: 200%">
-      <p>&nbsp;</p>
-      <p>A Developer thinking in Python</p>
-      <p>- "If we store that in a dictionary..."</p>
-    </div>
-  </section>
 </section>
+
 
 <section>
   <section>
     <h1>
+      Standards<br/>&
       Composability
     </h1>
   </section>
   <section>
-    <div style="font-size: 200%"><pre class="hll"><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></pre>
+    <div style="font-size: 190%"><pre class="hll"> <span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+     <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="k">if</span> <span class="n">valid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="p">]</span></pre>
     </div>
-    <div style="font-size: 200%" class="fragment"><pre class="hll"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
-    <span class="n">tmp</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">()</span>
-    <span class="n">tmp</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xs</span><span class="p">))</span>
-    <span class="n">tmp</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">tmp</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">tmp</span></pre>    
-    </div>
-  </section>
-
-  <section>
-    <div style="font-size: 100%"><pre class="hll"><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">firsts_sorted_by_second</span><span class="p">(</span>
-      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">items</span>
-    <span class="p">)</span> <span class="p">{</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">temp</span><span class="p">(</span><span class="n">items</span><span class="p">);</span>
-    
-      <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span>
-        <span class="n">temp</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
-        <span class="n">temp</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> 
-        <span class="p">[](</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span>
-          <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span> 
-      <span class="p">);</span>
-    
-      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
-      <span class="n">results</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">temp</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span>
-        <span class="n">temp</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
-        <span class="n">temp</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">results</span><span class="p">),</span>
-        <span class="p">[](</span><span class="k">auto</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">pair</span><span class="p">){</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="p">}</span>
-      <span class="p">);</span>
-    
-      <span class="k">return</span> <span class="n">results</span><span class="p">;</span>
-    <span class="p">}</span></pre>    
+    <div style="font-size: 190%" class="fragment"><pre class="hll"> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+     <span class="n">ys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+     <span class="n">sort</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+     <span class="n">zs</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">valid</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+     <span class="n">results</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">zs</span><span class="p">)</span>
+     <span class="k">return</span> <span class="n">results</span></pre>    
     </div>
   </section>
 
   <section>
-    <div style="font-size: 150%">
-      <ul>
-        <li>Readability counts</li>
-        <li class="fragment">Composability counts</li>
-        <li class="fragment">Vocalisation counts</li>
-      </ul>
+    <div style="font-size: 120%"><pre class="hll">  <span class="ct">vector</span><span class="o">&lt;</span><span class="ct">string</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">(</span><span class="k">const</span> <span class="ct">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">xs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="ct">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">xs</span><span class="p">;</span>
+    <span class="ct">sort</span><span class="p">(</span><span class="n">ys</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">ys</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+    <span class="ct">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">zs</span><span class="p">;</span>
+    <span class="ct">copy_if</span><span class="p">(</span>
+      <span class="n">ys</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+      <span class="n">ys</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+      <span class="ct">back_inserter</span><span class="p">(</span><span class="n">zs</span><span class="p">),</span>
+      <span class="n">valid</span>
+    <span class="p">);</span>
+
+    <span class="ct">vector</span><span class="o">&lt;</span><span class="ct">string</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
+    <span class="ct">transform</span><span class="p">(</span>
+      <span class="n">zs</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
+      <span class="n">zs</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+      <span class="ct">back_inserter</span><span class="p">(</span><span class="n">results</span><span class="p">),</span>
+      <span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span> <span class="k">return</span> <span class="ct">to_string</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="p">}</span>
+    <span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">results</span><span class="p">;</span>
+  <span class="p">}</span></pre>    
     </div>
   </section>
 
-  <section>
-    <div style="font-size: 150%">
-      Python batteries are included.<br/>
-      In c++, however,
-      <ul>
-        <li class="fragment">No iterables</li>
-        <li class="fragment">No suitable data-structures</li>
-        <li class="fragment">No DB API</li>
-        <li class="fragment">No standards for composability</li>
-      </ul>
+  <section data-background="images/7pm2 tr.jpg">
+    <div style="font-size: 200%">
+      It is easy to consider<br/>
+      a composition of functions,<br/>
+      than a recipe
     </div>
   </section>
-
 </section>
 
-<section>
 
+<section>
   <section>
     <h1>
       Simple is better than Complicated
@@ -571,10 +538,72 @@
     </div>
   </section>
 
-  <section data-background="images/pink.jpg">
+  <section data-background="images/ironic tr.jpg">
+    <div style="font-size: 200%">
+      We can use shared pointers everywhere<br/>
+      But when we write, read, review, debug, ...<br/>
+      We cannot stop thinking about...  
+    </div>
   </section>
 
 </section>
+
+
+<section>
+  <section>
+    <h1>
+      Type Hints
+    </h1>
+  </section>
+
+  <section>
+    <div>
+    <table><tr><td>
+        <img src="images/typesstopallbugs.jpg"></img>
+      </td></tr></table>
+    </div>
+  </section>
+
+  <section data-background="images/fluency tr.jpg">
+    <div style="font-size: 200%">
+      &nbsp;<br/>
+      Do we realy want to<br/>
+      define types and structures before<br/>
+      understanding the problem<br/>
+      and the solution?
+    </div>
+  </section>
+
+  <section data-background="images/tasks tr.jpg">
+    <div style="font-size: 200%">
+      Constantly task switching between:<br/>
+      Coding and Type-defining
+    </div>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
+    <div style="font-size: 200%">
+      How many bits would<br/>
+      I like this integer to have?
+    </div>
+  </section>
+
+  <section data-background="images/tasks tr.jpg">
+    <div style="font-size: 200%">
+      What happens when you are wrong?
+    </div>
+  </section>
+
+  <section>
+    <div style="font-size: 200%">
+      Lets just use int,<br/> and deal with it later.
+    </div>
+  </section>
+
+  <section data-background="images/pink.jpg">
+  </section>
+</section>
+
 
 <section>
   <section>
@@ -587,16 +616,16 @@
     <div style="font-size: 200%">
       Prototype is a model<br/>
       built to test a concept,<br/>
-      and to be learned from.
+      and to be learned from
     </div>
   </section>
 
   <section data-background="images/fluency tr.jpg">
     <div style="font-size: 200%">
       You write it once,<br/>
-      gaining experiance in both<br/>
+      gaining experience in both<br/>
       understanding the problem, and<br/>
-      understanding a solution.
+      understanding a solution
     </div>
   </section>
 
@@ -604,7 +633,7 @@
     <div style="font-size: 200%">
       You write it again,<br/>
       with less things to worry about<br/>
-      and attention for finer details.
+      and attention for finer details
     </div>
   </section>
 
@@ -615,7 +644,7 @@
     <div style="font-size: 200%">
       <p>Improved Readability</p>
       <p>Improved Maintainability</p>
-      <p>Less Bugs</p>
+      <p>Fewer Bugs</p>
     </div>
   </section>
 
@@ -623,7 +652,10 @@
   </section>
 
   <section>
-    <h1>Some things you can do only in Python</h1>
+    <div style="font-size: 200%">
+      Some things you can do<br/>
+      only in Python
+    </div>
   </section>
 
   <section>
@@ -645,35 +677,15 @@
       <p>TODO: background with both pics!!</p>
     </div>
     <div style="font-size: 200%">
-      Think in the language you write.
-    </div>
-  </section>
-
-  <section data-background="images/fluency tr.jpg">
-    <div style="font-size: 200%">
-      Define types and structures before or after understanding the problem and solution?
+      Think in the language you write
     </div>
   </section>
 
   <section data-background="images/tasks tr.jpg">
     <div style="font-size: 200%">
-      Constant task switching between:<br/>
-      Coding and Type-defining
+      Handle type checking, seperately
     </div>
   </section>
-
-  <section data-background="images/7pm2 tr.jpg">
-    <div style="font-size: 200%">
-      How many bits would<br/>
-      I like this integer to have?
-    </div>
-  </section>
-
-  <section data-background="images/tasks tr.jpg">
-    <div style="font-size: 200%">
-      What happens when you are wrong?
-    </div>
-  </section>  
 
   <section>
     <div style="font-size: 200%">
@@ -682,6 +694,11 @@
   </section>  
 
   <section data-background="images/prototype03.svg">
+    <div class="footer">
+        <a href="">
+          * TODO: reference the research
+        </a>
+      </div>
   </section>
 
   <section>
@@ -803,8 +820,8 @@
 -->
 
   <section>
-    <div style="font-size: 150%"><pre class="hll"><span></span><span class="kt">set</span><span class="o">&lt;</span><span class="kt">Point</span><span class="o">&gt;</span> <span class="n">calc_path</span><span class="p">(</span><span class="kt">map</span><span class="o">&lt;</span><span class="kt">Point</span><span class="p">,</span> <span class="kt">Point</span><span class="o">&gt;</span> <span class="n">prevs</span><span class="p">,</span> <span class="kt">Point</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">set</span><span class="o">&lt;</span><span class="kt">Point</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
+    <div style="font-size: 150%"><pre class="hll"><span></span><span class="kt">set</span><span class="o">&lt;</span><span class="ct">Point</span><span class="o">&gt;</span> <span class="nf">calc_path</span><span class="p">(</span><span class="kt">map</span><span class="o">&lt;</span><span class="ct">Point</span><span class="p">,</span> <span class="ct">Point</span><span class="o">&gt;</span> <span class="n">prevs</span><span class="p">,</span> <span class="ct">Point</span> <span class="n">point</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">set</span><span class="o">&lt;</span><span class="ct">Point</span><span class="o">&gt;</span> <span class="n">results</span><span class="p">;</span>
     <span class="n">point</span> <span class="o">=</span> <span class="n">prevs</span><span class="p">[</span><span class="n">point</span><span class="p">];</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">prevs</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">point</span><span class="p">)</span> <span class="o">!=</span> <span class="n">prevs</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
         <span class="n">results</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">point</span><span class="p">);</span>
@@ -878,6 +895,10 @@
   <div style="font-size: 150%; text-align: left;">
     <p>Twitter: @DudeJohnny1219</p>
     <p>email: johnny.dude@gmail.com</p>
+  </div>
+  <div class="bitly">
+    &nbsp;<br/>
+    <a href="" style="font-size:200%">bit.ly/XXXXXX</a>
   </div>
 </section>    
   
