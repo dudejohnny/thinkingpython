@@ -30,7 +30,7 @@
 <!------------------
   Section 0 - Title
 -------------------->
-<section>
+<section data-transition="slide-in slide-out">
   <div style="height: 700px;">
     <h1>
       How Thinking in<br/>
@@ -54,7 +54,7 @@
   </aside>
 </section>
 
-<section>
+<section data-transition="slide-in slide-out">
   <div style="height: 640px;">
     <h1>Hi, I'm Johnny Dude</h1>
     <table width=100%>
@@ -95,11 +95,11 @@
 <!------------------
   Table of Contents
 -------------------->
-<section style="font-size:250%">
+<section style="font-size:250%" data-transition="slide-in slide-out">
   <ol>
     <li>Psychological concepts</li>
     <li>How this relates to the<br/> development processes</li>
-    <li>Experiment<br/>(Non scientific)</li>
+    <li>Experiment<br/>(non scientific)</li>
   </ol>
 </section>
 
@@ -107,11 +107,11 @@
 <!-----------------------------------
   Section 1 - Psychological Concepts
 ------------------------------------->
-<section>
+<section data-transition="slide-in slide-out">
   <h1>Psychological Concepts</h1>
 </section>
 
-<section>
+<section data-transition="slide-in slide-out">
   <section data-background="images/pink.jpg">
   </section>
 
@@ -214,14 +214,14 @@
 <!---------------------
   Section 1 - Examples
 ----------------------->
-<section>
+<section data-transition="slide-in slide-out">
   <h1>
     How This Relates to<br/>
     the Development Processes
   </h1>
 </section>
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
       Immediate Feedback
@@ -251,8 +251,6 @@
 
 
 
-
-
 </pre>
   </section>
 
@@ -266,25 +264,6 @@
   <span class="go">[[&#39;8&#39;, &#39;./darker.css&#39;], [&#39;32&#39;, &#39;./index.html&#39;]]</span>
 
 
-
-
-
-
-</pre>
-  </section>
-
-  <section>
-    <div style="font-size: 200%;"><pre class="hll">  <span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;small folder&#39;</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;du -a {path}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-  <span class="go">[&#39;8\t./darker.css&#39;, &#39;32\t./index.html&#39;]</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-  <span class="go">[[&#39;8&#39;, &#39;./darker.css&#39;], [&#39;32&#39;, &#39;./index.html&#39;]]</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)</span>
-  <span class="go">[[&#39;96&#39;, &#39;./.git/objects/d1/31af6800b725b05b...&#39;],</span>
-  <span class="go"> [&#39;912&#39;, &#39;./images/repr.jpg&#39;],</span>
-  <span class="go"> [&#39;900&#39;, &#39;./.git/objects/20&#39;]]</span>
 
 
 </pre>
@@ -302,9 +281,7 @@
   <span class="go">[[&#39;96&#39;, &#39;./.git/objects/d1/31af6800b725b05b...&#39;],</span>
   <span class="go"> [&#39;912&#39;, &#39;./images/repr.jpg&#39;],</span>
   <span class="go"> [&#39;900&#39;, &#39;./.git/objects/20&#39;]]</span>
-  <span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span>
-  <span class="gp">...</span></pre>
-    </div>
+</pre>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -328,10 +305,10 @@
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
-      Object's API<br/> & Representation
+      Standard Representation
     </h1>
   </section>
 
@@ -391,22 +368,23 @@
   <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span><span class="p">,</span>
   <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span> <span class="p">}</span></pre>
     </div>
-    <span class="fragment">
-      <div style="font-size: 180%;"><pre class="hll"><span></span><span class="s2">&quot;Tyler Durden</span><span class="se">\n</span><span class="s2">Brad Pitt</span><span class="se">\n</span><span class="s2">Mia Wallace</span><span class="se">\n</span><span class="s2">Uma Thurman</span><span class="se">\n</span><span class="s2">&quot;</span></pre>
-      </div>
-      <div style="font-size: 180%;"><pre class="hll"><span class="p">[</span><span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">]</span></pre>
-      </div>
-    </span>
   </section>
 
   <section data-background="images/fluency tr.jpg">
-    <h1>Use Standard Representation</h1>
     <div style="font-size: 200%">
-      If you can read it, you can visualize it, think about it, discuss it with other developers
+      If you can read it, then<br/>
+      you can visualize it, think about it,<br/>
+      and discuss it with other developers
     </div>
   </section>
+</section>
 
+<section data-transition="slide-in slide-out">
   <section>
+    <h1>Standard API</h1>
+  </section>
+
+  <section data-background="images/7pm2 tr.jpg">
     <div style="font-size: 200%;"><pre class="hll"><span class="n">Counter</span><span class="p">({</span>
   <span class="s2">&quot;Walking Dead&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
   <span class="s2">&quot;Alive&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
@@ -415,14 +393,10 @@
 <span class="p">})</span></pre>
     </div>
   </section>
-
-  <section data-background="images/7pm2 tr.jpg">
-    <h1>Familiar Data Structures & API</h1>
-  </section>
  </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
       { }
@@ -431,34 +405,22 @@
   
   <section data-background="images/fluency tr.jpg">
     <div style="font-size: 200%">
-      <p>&nbsp;</p>
-      <p>A Developer thinking in Python</p>
-      <p>- "If we store that in a dictionary..."</p>
+      I want to store something in a dictionary...
     </div>
   </section>
 
   <section data-background="images/priming tr.jpg">
     <div style="font-size: 200%">
-      <p>A Developer thinking in c++</p>
-      <p>- "If we store that in a map..."</p>
-    </div>
-  </section>
-
-  <section data-background="images/priming tr.jpg">
-    <div style="font-size: 175%">
-      <p>Listener thinking: ~map...</p>
-      <p>~ "Why do we need the keys sorted?"</p>
-      <p>~ "Is there an implementation of frozen map?"</p>
+      I want to store something in a std::map...
     </div>
   </section>
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
-      Standards<br/>&
-      Composability
+      More Composability
     </h1>
   </section>
   <section>
@@ -510,7 +472,7 @@
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
       Simple is better than Complicated
@@ -548,7 +510,7 @@
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
       Type Hints
@@ -604,7 +566,7 @@
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <h1>
       Prototyping
@@ -708,13 +670,13 @@
   </section>  
 </section>
 
-<section>
+<section data-transition="slide-in slide-out">
   <h1>
     My Experiment
   </h1>
 </section>
   
-<section>
+<section data-transition="slide-in slide-out">
   <section>
     <div>
       <pre style="font-size: 100%">
@@ -864,7 +826,7 @@
 </section>
 
 
-<section>
+<section data-transition="slide-in slide-out">
   <h1>Summary</h1>
   <div>
     <img class="plain" src="images/priming 128.png"></img>
@@ -876,8 +838,8 @@
   <div style="font-size: 200%; text-align: left;">
     <ul>
       <li> Immediate Feedback </li>
-      <li> Familiar API and Reresentation </li>
-      <li> Composability and Standards </li>
+      <li> Standard Representation & API </li>
+      <li> Composability </li>
       <li> Prototype in Python </li>
     </ul>
   </div>
@@ -885,18 +847,17 @@
 
 
 <section>
-  <h1>Summary</h1>
-  <div>
-    <img class="plain" src="images/priming 128.png"></img>
-    <img class="plain" src="images/7pm2 128.png"></img>
-    <img class="plain" src="images/ironic 128.png"></img>
-    <img class="plain" src="images/tasks 128.png"></img>
-    <img class="plain" src="images/fluency 128.png"></img>
-  </div>
-  <div style="font-size: 200%; text-align: left;">
+  <div style="font-size: 200%;">
     <p>Think about the way you work</p>
     <p>Think about the way you think</p>
     <p>Experiment</p>
+  </div>
+</section>    
+
+
+<section>
+  <div style="font-size: 200%;">
+    Try to <em>think</em> in Python
   </div>
 </section>    
 
