@@ -22,6 +22,19 @@
   "Brad Pitt": "Alive",
   "Mia Wallace": "Alive" }
 
+
+{ "Tyler Durden": <PersonState object at 0x7fd2622fbd60>,
+  "Uma Thurman": <PersonState object at 0x7fd2622fbc40>,
+  "Brad Pitt": <PersonState object at 0x7fd26231a160>,
+  "Mia Wallace": <PersonState object at 0x7fd26231a100> }
+
+
+{ "Tyler Durden": PersonState(alive=0),
+  "Uma Thurman": PersonState(alive=1),
+  "Brad Pitt": PersonState(alive=1),
+  "Mia Wallace": PersonState(alive=1) }
+
+
 Counter({
   "Walking Dead": 19,
   "Alive": 7,

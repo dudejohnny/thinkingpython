@@ -39,12 +39,12 @@
 }
 
 .reveal div.footer {
-  font-size: 40px;
+  font-size: 48px;
   font-style: italic;
   font-weight: normal;
   text-align: left;
   color: #0060B0;
-  position: fixed;
+  position: relative;
   bottom: 10px;
   left: 10px;
   padding: 0;
