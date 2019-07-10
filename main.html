@@ -43,7 +43,7 @@
     </p>
   </div>
   <div class="bitly">
-    <a href="bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
+    <a href="http://bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
   </div>
   <!-- NOTES -->
   <aside class="notes">
@@ -67,8 +67,7 @@
         </td>
         <td width=75%>
           <div style="text-align: center;">
-            <!-- <<a herf="https://twitter.com/dudejohnny1219">@DudeJohnny1219</a><br/> -->
-            <p>Software Engineer at <a herf="https://www.toganetworks.com">TogaNetworks</a></p>
+            <p>Software Engineer at <a herf="www.toganetworks.com">TogaNetworks</a></p>
             <p>Using Python at work since 2005</p>
             <p>I use Python for <em>prototyping</em></p>
             <p>Responsible for c++ <em>production</em> code</p>
@@ -80,7 +79,7 @@
   </div>
   <div class="bitly">
     &nbsp;<br/>
-    <a href="bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
+    <a href="http://bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
   </div>
   <!-- NOTES -->
   <aside class="notes">
@@ -351,7 +350,6 @@
 
   <section data-background-video="images/idle.mp4" data-background-size="contain">
     <aside class="notes">
-      <h2>4:00</h2>
       <ol>
         <li>Real programmers didn’t use mice and windows.</li>
         <li>It looked something like this.</li>
@@ -371,9 +369,20 @@
      <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">size</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">nlargest</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">pairs</span><span class="p">)]</span></pre>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>In this example, we have a short function.</li>
+        <li>It aims to find the largest files in a folder.</li>
+        <li>This system function returns standard output.</li>
+        <li>We use it to call “Disk Usage”, it returns one line per file</li>
+        <li>Splitlines returns a Python list of lines.</li>
+        <li>Split each line by tab to get a name, size pair.</li>
+        <li>nlargest gives us the n largest pairs, descending by size.</li>
+        <li>Drop the size.</li>
+        <li>Return the filenames.</li>
+        <li>There is a bug here. A silly bug.</li>
+        <li>And it doesn’t matter how senior you are, sometimes you will write silly code</li>
+        <li>Let’s use the interpreter alongside writing the code.</li>
+      </ol>
     </aside>
   </section>
 
@@ -390,10 +399,14 @@
 
 
 </pre>
+    </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>We would first define example arguments.</li>
+        <li>Execute a statement, and sample the results</li>
+        <li>Once we see it is ok,</li>
+        <li>we move forward to the next statement.</li>
+      </ol>
     </aside>
   </section>
 
@@ -410,10 +423,13 @@
 
 
 </pre>
+    </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>Did you notice that the numbers are actually strings?</li>
+        <li>What does this mean to nlargest?</li>
+        <li>If you missed it, it would be glaringly obvious after executing the next statement.</li>
+      </ol>
     </aside>
   </section>
 
@@ -430,10 +446,14 @@
   <span class="go"> [&#39;912&#39;, &#39;./images/repr.jpg&#39;],</span>
   <span class="go"> [&#39;900&#39;, &#39;./.git/objects/20&#39;]]</span>
 </pre>
+    </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>96 is not bigger than 912.</li>
+        <li>Fix it, without task switching, and with the same information in your working memory.</li>
+        <li>And move on.</li>
+        <li>The benefits are,</li>
+      </ol>
     </aside>
   </section>
 
@@ -442,9 +462,13 @@
       Learn faster
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>You learn faster.</li>
+        <li>Humans (and not only humans) tend to learn faster,</li>
+        <li>and achieve higher degrees of expertise</li>
+        <li>when they get feedback.</li>
+        <li>The sooner the better.</li>
+      </ol>
     </aside>
   </section>
 
@@ -454,9 +478,15 @@
       <b>reduces</b> task switching
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>it is important not to confuse task switching with <b>window</b> switching.</li>
+        <li>Writing code requires us to consider how it will be executed,</li>
+        <li>so I do not consider executing it in another window as a different task, or a different state of mind.</li>
+        <li>Writing blindly however,</li>
+        <li>and finding this bug while unit testing,</li>
+        <li>forces us to task switch to a debugging mode.</li>
+        <li>Remember this can cost almost half of your productivity.</li>
+      </ol>
     </aside>
   </section>
 
@@ -466,18 +496,34 @@
       <span class="fragment">without concious effort</span>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>With immediate feedback, you also gain confidence that your code works</li>
+        <li>by executing it at least once successfully,</li>
+        <li>without spending extra conscious effort.</li>
+      </ol>
     </aside>
   </section>
 
-  <section data-background="images/7pm2 tr.jpg">
-    <img src="images/lego_laptop_by_wlart12.jpg"></img>
+  <section><!--</section> data-background="images/7pm2 tr.jpg"> -->
+    <div style="font-size: 400%;">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="images/segfault.jpg" ></img>
+      &nbsp;&nbsp;
+      <img src="images/7pm2 256.png" class="plain" style="vertical-align: top;"></img>
+    </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>When you learn c, you learn c loops,</li>
+        <li>you also learn not to get an index out of range.</li>
+        <li>A must-have skill for c developers.</li>
+        <li>It may result with debugging memory corruption.</li>
+        <li>Which is painful, hard to do, and hard to forget.</li>
+        <li>You will have to spend years double and triple checking every edge case in every loop you will ever write</li>
+        <li>before you are fluent in c loop. (if ever).</li>
+        <li>Executing it all in your head.</li>
+        <li>Instead of keeping the focus on your main task.</li>
+        <li>And despite <b>all</b> this effort, you will still have an index out of range bug, once in a while.</li>
+      </ol>
     </aside>
   </section>
 </section>
@@ -489,32 +535,35 @@
       Standard Representation
     </h1>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <h2>8:00</h2>
+      <ol>
+        <li>Object representation is often underestimated.</li>
+      </ol>
     </aside>
   </section>
 
   <section>
     <div style="font-size: 200%;"><pre class="hll"><span></span><span class="p">[</span>
   <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
-     <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span> <span class="p">},</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+    <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span><span class="p">},</span>
   <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
-     <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span><span class="s2">&quot;Doug&quot;</span><span class="p">,</span> <span class="s2">&quot;Julie&quot;</span><span class="p">]</span> <span class="p">},</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span><span class="s2">&quot;Doug&quot;</span><span class="p">,</span> <span class="s2">&quot;Julie&quot;</span><span class="p">]</span><span class="p">},</span>
   <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-     <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span> <span class="p">},</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="s2">&quot;sibling&quot;</span><span class="p">:[]</span><span class="p">},</span>
   <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">,</span>
     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span>
-    <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span><span class="o">...</span><span class="p">]</span> <span class="p">},</span>
+    <span class="s2">&quot;sibling&quot;</span><span class="p">:[</span> <span class="s2">&quot;Dechen&quot;</span><span class="p">,</span> <span class="s2">&quot;Taya&quot;</span><span class="p">,</span> <span class="s2">&quot;Ganden&quot;</span><span class="p">,</span> <span class="s2">&quot;Mipam&quot;</span><span class="p">]</span><span class="p">},</span>
 <span class="p">]</span></pre>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>Can you tell me how old Brad Pitt is?</li>
+        <li>You should find the answer quickly.</li>
+        <li>Since you should be fluent in reading such a data structure.</li>
+      </ol>
     </aside>
   </section>
 
@@ -528,15 +577,23 @@
     <div style="font-size: 180%;" class="fragment"><pre class="hll"><span class="p">[</span><span class="s2">&quot;Tyler Durden&quot;</span><span class="p">,</span> <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">,</span> <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">,</span> <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">]</span></pre>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>If we want a...</li>
+        <li>We can use a line separated text,</li>
+        <li>like most linux tools do.</li>
+        <li>And then we can use <b>any linux tool</b> or <b>any regular expression</b> library for high performance matchings.</li>
+        <li>But it is not easy to read. A list is.</li>
+        <li>My point is. Regardless of the implementation of your data structure, keep a standard representation for the user. (which is often yourself.)</li>
+        <li>So you can visualize it in your mind, and think about it.</li>
+        <li>I’ll take this example a step forward.</li>
+        <li>What if we wanted a dictionary with keys that can be searched by regular expression.</li>
+      </ol>
     </aside>
   </section>
 
   <section>
-    <div style="font-size: 200%;">
-      A dict with regex searchable string keys
+    <div style="font-size: 180%;">
+      A dictionary with keys that<br/> can be searched by regular expression.
     </div>
     <div style="font-size: 200%;"><pre class="hll"><span class="s2">&quot;Brad Pitt</span><span class="se">\n</span><span class="s2">Mia Wallace</span><span class="se">\n</span><span class="s2">Tyler Durden</span><span class="se">\n</span><span class="s2">Uma Thurman</span><span class="se">\n</span><span class="s2">&quot;</span>
 <span class="p">{</span> <span class="mi">22</span><span class="p">:</span> <span class="s2">&quot;Dead&quot;</span><span class="p">,</span>
@@ -550,13 +607,23 @@
   <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span> <span class="s2">&quot;Alive&quot;</span> <span class="p">}</span></pre>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>We will use the line separated text for the keys</li>
+        <li>Those keys may be long. So we can use the offset of the key in the text as a dictionary key.</li>
+        <li>It saves space. It saves CPU when hashing.</li>
+        <li>But it looks like that.</li>
+        <li>Can you tell me if Mia Wallace is alive or dead?</li>
+        <li>How about now?</li>
+        <li>Again. Regardless of the implementation of your data structure, keep a standard representation for the user.</li>
+        <li>In gdb when debugging c++ code, you have modern Python scripts available to pretty print standard library data structures. The problem is when you write your own.</li>
+      </ol>
     </aside>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
+    <div>
+      <p>&nbsp;</p>
+    </div>
     <div style="font-size: 200%;"><pre class="hll"> (gdb) p my_dict 
  $1 = {
    keys = "Brad Pitt\nMia Wallace\nTyler Durden\nUma T
@@ -567,9 +634,15 @@
      [35] = PersonState::alive, 
      [22] = PersonState::dead}}</pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>It will look like that</li>
+        <li>In Python as well, I often see user implemented objects without a __repr__</li>
+      </ol>
+    </aside>
   </section>
 
-  <section data-background="images/7pm2 tr.jpg">
+  <section>
     <div style="font-size: 200%;"><pre class="hll"><span class="p">{</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">PersonState</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7fd2622fbd60</span><span class="o">&gt;</span><span class="p">,</span>
   <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">:</span>
@@ -579,11 +652,18 @@
   <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">PersonState</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7fd26231a100</span><span class="o">&gt;</span> <span class="p">}</span></pre>
     </div>
-    <div style="font-size: 200%;" class="fragment"><pre class="hll"><span class="p">{</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="n">alive</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-  <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="n">alive</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-  <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="n">alive</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-  <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="n">alive</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">}</span></pre>
+    <div style="font-size: 200%;" class="fragment"><pre class="hll"><span class="p">{</span> <span class="s2">&quot;Tyler Durden&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+  <span class="s2">&quot;Uma Thurman&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+  <span class="s2">&quot;Brad Pitt&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+  <span class="s2">&quot;Mia Wallace&quot;</span><span class="p">:</span> <span class="n">PersonState</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">}</span></pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>or a non standard one.</li>
+        <li>If you say I’ll write a __repr__ when I need it, it won’t get done.</li>
+        <li>If you don’t follow standards, it is more confusing than helpful.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -593,9 +673,15 @@
       and discuss it with other developers
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>If you can read it,</li>
+        <li>then you can visualize it in your mind,</li>
+        <li>think about it effortlessly,</li>
+        <li>and discuss it with other developers.</li>
+        <li>You will find it easier to work with, and less of a distraction from your main task.</li>
+        <li>For me the side effects of the __repr__’s plain readability are more important.</li>
+        <li>The ability to visualize, and think about the data structure.</li>
+      </ol>
     </aside>
   </section>
 </section>
@@ -603,6 +689,12 @@
 <section data-transition="slide-in slide-out">
   <section>
     <h1>Standard API</h1>
+    <aside class="notes">
+      <h2>10:30</h2>
+      <ol>
+        <li>Standard API <b>is also important.</b></li>
+        <li>A very good example of data structure design is the Counter.</li>
+      </ol>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
@@ -614,9 +706,19 @@
 <span class="p">})</span></pre>
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>You can read this immediately and be alarmed by the number of walking dead.</li>
+        <li>Its underlying data structure is a well known one,</li>
+        <li>with a well known API,</li>
+        <li>and the counter explicitly tells you what it is.</li>
+        <li>The only difference is the constructor.</li>
+        <li>Using a familiar data structure and API is the base for <b>keeping your mind free to think about many other things.</b></li>
+        <li>One thing about the magical number 7.</li>
+        <li>It can refer to an <b>entity with a limitless amount of entropy.</b></li>
+        <li>It is more difficult to remember <b>9 random digits</b> than <b>2 random words</b>,</li>
+        <li>which in terms of entropy, contains more information.</li>
+        <li>A dictionary with a different constructor is easier to remember than a counter with no explicit reference to a known data structure or API.</li>
+      </ol>
     </aside>
   </section>
  </section>
@@ -628,9 +730,11 @@
       { }
     </h1>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <h2>11:30</h2>
+      <ol>
+        <li>Speaking about dictionaries.</li>
+        <li>The following is what I now consider the most important property of a Python dictionary.</li>
+      </ol>
     </aside>
   </section>
   
@@ -639,9 +743,11 @@
       I want to store something in a <b>dictionary</b>...
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>If I say to you,<b> I want to store something in a dictionary…</b></li>
+        <li>You will have the ability of giving undivided attention to the explanation that follows. </li>
+        <li>But, If I say to you,</li>
+      </ol>
     </aside>
   </section>
 
@@ -650,9 +756,14 @@
       I want to store something in a std::<b>map</b>...
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li><b>I want to store something in a map...</b></li>
+        <li>If you are a c++ developer, then your mind starts to think about things like:</li>
+        <li>Why do we need the keys ordered?</li>
+        <li>Why not to use a hash table?</li>
+        <li>And, Why is there no good implementation of a hash-table in the standard library…?</li>
+        <li>And even if you do not think about it consciously, your mind will prepare itself to answer such questions in case of need.</li>
+      </ol>
     </aside>
   </section>
 </section>
@@ -661,12 +772,13 @@
 <section data-transition="slide-in slide-out">
   <section>
     <h1>
-      More Composability
+      Composability
     </h1>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <h2>12:30</h2>
+      <ol>
+        <li>Now, composability, and another silly example</li>
+      </ol>
     </aside>
   </section>
 
@@ -682,9 +794,57 @@
      <span class="k">return</span> <span class="n">zs</span></pre>    
     </div>
     <aside class="notes">
-      <p>A</p>
-      <p>B</p>
-      <p>C</p>
+      <ol>
+        <li>here I want list that contains: <b>a string of a number for each number in sorted numbers if the number is valid.</b></li>
+        <li>Python here allows me to describe it very explicitly and dictates how it may sound in the voice inside my head.</li>
+        <li>Or in a talk in front of an audience.</li>
+        <li>c++, without diving into details,</li>
+        <li>does not allow composition of algorithms,</li>
+        <li>and iterators in its standard library.</li>
+        <li>In some cases, it forces the user to create copies.</li>
+        <li>In other cases, to modify data in place.</li>
+      </ol>
+    </aside>
+  </section>
+
+  <section>
+    <div style="font-size: 190%"><pre class="hll">
+ Mix the ingredients in a bowl.
+ Pour the bowl’s contents into a mould.
+ Bake the mould along with its content.</pre>
+    </div>
+    <div style="font-size: 190%" class="fragment" data-fragment-index="2"><pre class="hll">
+ Bake the mixed ingredients.</pre>    
+    </div>
+    <aside class="notes">
+      <ol>
+        <li>Consider this recipe:</li>
+        <li>“mix the ingredients in a bowl. Pour the bowl’s contents into a mould. Bake the mould along with its content.”</li>
+        <li>Those were 3 sentences, with intermediate variables, and a lot of obvious information.</li>
+        <li>A baker reading it may translate it into <b>“bake the mixed ingredients”</b>, because that is all they need to keep in mind.</li>
+      </ol>
+    </aside>
+  </section>
+
+  <section>
+    <div style="font-size: 190%"><pre class="hll"> <span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+     <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="k">if</span> <span class="n">valid</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="p">]</span></pre>
+    </div>
+    <div style="font-size: 190%"><pre class="hll"> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+     <span class="n">xs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+     <span class="n">sort</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+     <span class="n">ys</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">valid</span><span class="p">,</span> <span class="n">xs</span><span class="p">)</span>
+     <span class="n">zs</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+     <span class="k">return</span> <span class="n">zs</span></pre>    
+    </div>
+    <aside class="notes">
+      <ol>
+        <li>This showed a functional composition. It works for me because I like to think functionally.</li>
+        <li>In Python you can be consistent and write an imperative version, or OO version, if you want.</li>
+        <li>You can say, I want this list <b>sorted, contain valid strigified numbers.</b></li>
+        <li>In the recipe’s case: “mix, and bake”.</li>
+        <li>Btw, it is like c++ because actual c++</li>
+      </ol>
     </aside>
   </section>
 
@@ -712,6 +872,12 @@
     <span class="k">return</span> <span class="n">zs</span><span class="p">;</span>
   <span class="p">}</span></pre>    
     </div>
+    <aside class="notes">
+      <ol>
+        <li>looks like this,</li>
+        <li>which is a topic for a different talk.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
@@ -719,6 +885,14 @@
       It is easy to think<br/>
       with <b>composable</b> tools
     </div>
+    <aside class="notes">
+      <ol>
+        <li>But my point is that</li>
+        <li>It is easier to think with <b>composable</b> tools.</li>
+        <li>Generally, the tools and modules available in the Python standard library are consistent and composable.</li>
+        <li>My favorite example is the unittest.mock library written for the unittest framework but works with any tests framework.</li>
+      </ol>
+    </aside>
   </section>
 </section>
 
@@ -728,6 +902,14 @@
     <h1>
       Simple is better than Complicated
     </h1>
+    <aside class="notes">
+      <h2>15:00</h2>
+      <ol>
+        <li>Simple is better than Complicated</li>
+        <li>I skipped the complex part</li>
+        <li>You'll see why soon</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -738,6 +920,15 @@
 <span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// pass by shared pointer</span>
 <span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">// pass by unique pointer</span></pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>When writing c++ functions, you can pass arguments by value, reference, pointer, and recently, rvalue, and smart pointers.</li>
+        <li>Smart pointers can be either unique pointer for unique <b>ownership</b>, or shared pointer for shared <b>ownership</b>.</li>
+        <li>Now let’s say you are in charge of a c++ project, not caring about micro performance.</li>
+        <li>You may think, for the sake of simplicity, why not just use shared pointers?</li>
+        <li>It works in Python, it makes things simple. and</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -768,6 +959,19 @@
     <div style="font-size: 180%" class="fragment" data-fragment-index="3">
       <pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span> <span class="k">const</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>       <span class="c1">// what is immutable?</span></pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>And then someone decides to use a unique pointer. </li>
+        <li><b>Why</b>, because the c++ core guidelines say so.</li>
+        <li>A 450 page guide that any good c++ engineer follows.</li>
+        <li>But now we have a problem, what if we need to accept a smart pointer but don’t care which?</li>
+        <li>The c++ core guidelines advise is to use a raw pointer and make it const. (which means immutable in that scope.)</li>
+        <li>Putting the keyword const before the type makes the object immutable, after makes the pointer immutable, and you can make both immutable as well.</li>
+        <li>And then read code and see const in the middle.</li>
+        <li>The c++ core guidelines has a section about this. <b>It says don’t do that. It works and it does something, but please don’t do that.</b></li>
+        <li>And you remember that complex is not that bad.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -800,6 +1004,17 @@
         <pre class="hll"><span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="n">Object</span> <span class="k">const</span><span class="o">*</span> <span class="n">obj</span><span class="p">)</span>       <span class="c1">// what is immutable?</span></pre>
       </div>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>And decide to forget about the c++ core guidelines</li>
+        <li>and just use shared pointers everywhere.</li>
+        <li>And then you spend a week debugging a segfault caused by a line like this.</li>
+        <li>This is not funny.</li>
+        <li>This is the result of the c++ culture.</li>
+        <li>You want to optimize everything in the most unnecessarily absurd way.</li>
+        <li>You see, every time we read code, write code, test, debug, or even think about code, we also care for optimizing the parameter passing.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/ironic tr.jpg">
@@ -807,6 +1022,13 @@
       We can use shared pointers everywhere<br/>
       But, we <b>cannot</b> stop <em>thinking</em> about...  
     </div>
+    <aside class="notes">
+      <ol>
+        <li>We can use shared pointers everywhere, but cannot stop thinking about pink elephants.</li>
+        <li>And every other possible parameter passing option in the c++ language.</li>
+        <li>Here Python makes <b>thinking</b> easier by ignoring micro performance, and offering only one option.</li>
+      </ol>
+    </aside>
   </section>
 
 </section>
@@ -817,6 +1039,12 @@
     <h1>
       Type Hints
     </h1>
+    <aside class="notes">
+      <h2>18:00</h2>
+      <ol>
+        <li>I wanted to mention type hints.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -825,6 +1053,14 @@
         <img src="images/typesstopallbugs.jpg"></img>
       </td></tr></table>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Not that part. But it got me laughing. until I got to 2039.</li>
+        <li>...</li>
+        <li>So we’re in 2019, static type checking made a huge comeback in the Python community,</li>
+        <li>and I had to try it. And it took me like 5 minutes to ask:</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -835,6 +1071,15 @@
       understanding the problem<br/>
       and the solution?
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Do we...</li>
+        <li>Python, reminded me that it is possible to do it separately. Which seems logical.</li>
+        <li>So I wrote code, and added hints later.</li>
+        <li>And I realized another thing I haven’t noticed before.</li>
+        <li><b>Type checking</b> and <b>describing processes</b> are completely different tasks, which uses different systems and require attention to different details.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/tasks tr.jpg">
@@ -842,6 +1087,13 @@
       Constantly task switching between:<br/>
       Coding and Type-defining
     </div>
+    <aside class="notes">
+      <ol>
+        <li>So when we use statically typed languages,</li>
+        <li>we are constantly task switching between coding and type defining.</li>
+        <li>And it is worse for statically typed languages. Just defining a function that gets a number raises the question of:</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
@@ -849,21 +1101,44 @@
       How many bits would<br/>
       I like this integer to have?
     </div>
+    <aside class="notes">
+      <ol>
+        <li>...</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/tasks tr.jpg">
     <div style="font-size: 200%">
       What happens when you are wrong?
     </div>
+    <aside class="notes">
+      <ol>
+        <li>...</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
     <div style="font-size: 200%">
       Lets just use int,<br/> and deal with it later.
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Or you can say, lets just use int, the default,</li>
+        <li>we don’t need to think about it now,</li>
+        <li>we can deal with it later.</li>
+        <li>you can say <b>we don’t need to think about it now</b></li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/pink.jpg">
+    <aside class="notes">
+      <ol>
+        <li>But, can you actually do it?</li>
+      </ol>
+    </aside>
   </section>
 </section>
 
@@ -873,6 +1148,13 @@
     <h1>
       Prototyping
     </h1>
+    <aside class="notes">
+      <h2>20:00</h2>
+      <ol>
+        <li>This is the last example for today, a topic I am very familiar with.</li>
+        <li>It puts everything together, because prototyping is a way of thinking actually.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -881,6 +1163,13 @@
       built to <b>test</b> a concept,<br/>
       and to be <b>learned</b> from
     </div>
+    <aside class="notes">
+      <ol>
+        <li>This is the last example for today, a topic I am very familiar with.</li>
+        <li>It puts everything together, because prototyping is a way of thinking actually.</li>
+        <li>...</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/fluency tr.jpg">
@@ -890,6 +1179,13 @@
       understanding the problem, and<br/>
       understanding a solution
     </div>
+    <aside class="notes">
+      <ol>
+        <li>...</li>
+        <li>This is a solution you’re testing.</li>
+        <li>And if you are satisfied with the result</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/7pm2 tr.jpg">
@@ -898,6 +1194,11 @@
       with less things to worry about<br/>
       and attention to finer details
     </div>
+    <aside class="notes">
+      <ol>
+        <li>...</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -906,12 +1207,36 @@
       <p>Improved Maintainability</p>
       <p>Fewer Bugs</p>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Writing it again after it is organized in your mind will be more readable.</li>
+        <li>With all sub-problems solved, you will consider less things,</li>
+        <li>so you will be able to think about future tasks,</li>
+        <li>maintainability,</li>
+        <li>and maybe find bugs you had no capacity to notice before.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/prototype01.svg">
+    <aside class="notes">
+      <ol>
+        <li>It can cost you productivity time, though.</li>
+        <li>prototyping should take a bit less time,</li>
+        <li>and writing it the second time should be at least twice as fast.</li>
+        <li>For me it usually cost about 25% more time.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/prototype02.svg">
+    <aside class="notes">
+      <ol>
+        <li>This will eventually be profitable for the <b>entire team’s productivity.</b></li>
+        <li>As you will reduce future tasks complexities as well.</li>
+        <li>This is true, when using <b>any programming language.</b></li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -919,6 +1244,11 @@
       Some things you can do<br/>
       only in Python
     </div>
+    <aside class="notes">
+      <ol>
+        <li>But, some things you can only do in Python</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -928,8 +1258,14 @@
     </div>
     <div style="font-size: 200%">
       Use a dictionary<br/>
-      Define a function with arguments
+      Define a function
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Use a dictionary, <b>without considering it's implementation,</b></li>
+        <li>Define a function, <b>not caring about arguments types and bits.</b></li>
+      </ol>
+    </aside>
   </section>
   
   <section>
@@ -941,6 +1277,12 @@
       Think in the language you write<br/>
       &nbsp;
     </div>
+    <aside class="notes">
+      <ol>
+        <li>You can think in the language you write.</li>
+        <li>Instead of translating your thoughts.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -951,12 +1293,26 @@
       Handle type checking, seperately<br/>
       &nbsp;
     </div>
+    <aside class="notes">
+      <ol>
+        <li>In case your product is in python,</li>
+        <li>You can handle type checking,</li>
+        <li><b>later, separately.</b></li>
+      </ol>
+    </aside>
   </section>
 
   <section>
     <div style="font-size: 200%">
       Along with many other reasons.
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Along with many other reasons, </li>
+        <li>not related to thinking,</li>
+        <li>development in Python is about 4 times faster than c++.</li>
+      </ol>
+    </aside>
   </section>  
 
   <section data-background="images/prototype03.svg">
@@ -966,13 +1322,32 @@
         An empirical comparison of c, c++, java, perl, python, ...
       </a>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>So prototyping in it should also be at least 4 times faster.</li>
+        <li>At the bottom you can find a reference to a study showing it in one domain for example. </li>
+        <li>It’s a nice old empirical research that I like</li>
+        <li>It is so counterintuitive I often forget it when I am busy working.</li>
+        <li>Adding the task of prototyping in Python before writing c++ code results in less work hours.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
     <div style="font-size: 200%">
       How much of the speedup do we get<br/>
-      from <b>thinking</b> faster?
+      from <em>thinking</em> faster?
     </div>
+    <aside class="notes">
+      <ol>
+        <li>My question is</li>
+        <li>how much of this speedup do we get from thinking faster?</li>
+        <li>And not from <b>fancy features</b></li>
+        <li>and other <b>technical qualities</b></li>
+        <li>that make development in Python faster.</li>
+        <li>As you all may be aware.</li>
+      </ol>
+    </aside>
   </section>  
 </section>
 
@@ -980,6 +1355,17 @@
   <h1>
     My Experiment
   </h1>
+  <aside class="notes">
+    <h2>23:00</h2>
+    <ol>
+      <li>And we get to the last part.</li>
+      <li>I want to end with a story about a personal experiment I did.</li>
+      <li>It is not a valid research,</li>
+      <li>But it is something you can try if you have spare time,</li>
+      <li>and it demonstrates the productivity costs of thinking in Python.</li>
+      <li>In the beginning of this year, we were interviewing candidates, and we gave them a well known problem with a well known solution.</li>
+    </ol>
+  </aside>
 </section>
   
 <section data-transition="slide-in slide-out">
@@ -1000,24 +1386,76 @@
  |              |E          |  |              |E          |
  +--+--+--+--+--+--+--+--+--+  +--+--+--+--+--+--+--+--+--+ </pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Find the shortest path in a text maze.</li>
+        <li>You would get the maze on the left as input for example,</li>
+        <li>and expected to produce the solution on the right.</li>
+        <li>Now, what we wanted to understand the difference in development time it takes to implement a solution in Python compared to c++.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment01.svg">
+    <aside class="notes">
+      <ol>
+        <li>So I implemented it a few times. In that order.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment02.svg">
+    <aside class="notes">
+      <ol>
+        <li>And measured the time it took.</li>
+        <li>As you can see c++ clearly takes more time.</li>
+        <li>And I remembered that the empirical research I talked about previously, correlated SLOC with work hours.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment03.svg">
+    <aside class="notes">
+      <ol>
+        <li>So I counted it.</li>
+        <li>And found no reasonable correlation.</li>
+        <li>So I had to read the code.</li>
+        <li>And what bothered me in particular, was the last two versions.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment04.svg">
+    <aside class="notes">
+      <ol>
+        <li>You see I chose the question, and considered possible solutions before even writing the first implementation.</li>
+        <li>By the time I got to the 4th implementation.</li>
+        <li>I was already bored,</li>
+        <li>I didn’t use an interpreter,</li>
+        <li>I didn’t have any compilation error.</li>
+        <li>I had a very good idea how to write the implementation</li>
+        <li>And the results were very similar</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment05.svg">
+    <aside class="notes">
+      <ol>
+        <li>In fact,</li>
+        <li>both versions had exactly the same algorithms, data structures, functions, and names.</li>
+        <li>The only difference was the number of characters, so if it wasn’t boring enough so far, I re-typed the solutions and reduced the extra time.</li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment06.svg">
+    <aside class="notes">
+      <ol>
+        <li>so if it wasn’t boring enough so far, I re-typed the solutions and reduced the extra time.</li>
+        <li>It still took twice the time in c++.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -1039,12 +1477,30 @@
 
 <span class="n">points</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">calc_path</span><span class="p">(</span><span class="n">prevs</span><span class="p">,</span> <span class="n">end_point</span><span class="p">))</span></pre>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>Here is one example function from the implementations.</li>
+        <li>I didn’t use any fancy Python features,</li>
+        <li>I did use a generator, I think from habit, but I didn’t use it’s true power. <b>It's composability</b></li>
+        <li>I just populated a set.</li>
+        <li>You have to understand that I am significantly more fluent in c++, I should be able to compose the c++ version faster,</li>
+        <li>and yet it took me twice the time.</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
     <div>
       <h1>Why?</h1>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>And the question is why?</li>
+        <li>Why did it take so long?</li>
+        <li>Failing to find a solution that relates to the development process.</li>
+        <li>The question literally became:</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
@@ -1058,16 +1514,51 @@
       <img class="plain" src="images/priming 256.png"></img>
       <img class="plain" src="images/7pm2 256.png"></img>
     </div>
+    <div>
       <img class="plain" src="images/ironic 256.png"></img>
       <img class="plain" src="images/tasks 256.png"></img>
       <img class="plain" src="images/fluency 256.png"></img>
+    </div>
+    <aside class="notes">
+      <ol>
+        <li>And these are some possible <b>answers</b> that could fit a 30 minutes talk.</li>
+        <li>we're not done yet</li>
+        <li>one more thing</li>
+      </ol>
+    </aside>
   </section>
 
   <section>
     <h1>Experiment,<br/> it's fun</h1>
+    <aside class="notes">
+      <ol>
+        <li>It’s fun to experiment.</li>
+        <li>And you don’t need to go out of your way to do it.</li>
+      </ol>
+      <hline></hline>
+      <ol>
+        <li>Maybe sometimes you too try different approaches.</li>
+        <li>Sometimes I feel like using an interpreter and sometimes writing blindly</li>
+        <li>Without forcing myself to go out of my usual ways.</li>
+        <li>I can measure and compare to it to my time estimatinos.</li>
+        <li>And with time I will have enough samples to hopefully get
+            a clear answer for the question of <b>which process works best for me?</b></li>
+      </ol>
+    </aside>
   </section>
 
   <section data-background="images/experiment03.svg">
+    <aside class="notes">
+      <ol>
+        <li>In this case, I needed to understand the process the candidates will go through,</li>
+        <li>and after the first two implementations didn’t make sense to me,</li>
+        <li>I had to know what happens if I write it in Python again.</li>
+        <li>For some reason I wrote it in Python the 4th time.</li>
+        <li>And then I also wanted to know how another implementation in c++ would work.</li>
+        <li>I was not performing a supervised experiment.</li>
+        <li>I was following my mood.</li>
+      </ol>
+    </aside>
   </section>
 </section>
 
@@ -1081,14 +1572,45 @@
     <img class="plain" src="images/tasks 128.png"></img>
     <img class="plain" src="images/fluency 128.png"></img>
   </div>
-  <div style="font-size: 200%; text-align: left;">
-    <ul>
-      <li> Immediate Feedback </li>
-      <li> Standard Representation & API </li>
-      <li> Composability </li>
-      <li> Prototype in Python </li>
-    </ul>
+  <div style="font-size: 200%;">
+    <div class="fragment grow" data-fragment-index="1">
+      <div class="fragment shrink" data-fragment-index="2">
+        Immediate Feedback
+      </div>
+    </div>
+    <div class="fragment grow" data-fragment-index="2">
+      <div class="fragment shrink" data-fragment-index="3">
+        Standard Representation & API
+      </div>
+    </div>
+    <div class="fragment grow" data-fragment-index="3">
+      <div class="fragment shrink" data-fragment-index="4">
+        Composability
+      </div>
+    </div>
+    <div class="fragment grow" data-fragment-index="4">
+        Prototype in Python
+    </div>
   </div>
+  <aside class="notes">
+    <ol>
+      <li><b>Immediate Feedback</b> - Its importance for <b>acquiring fluency, reducing task switching, and improving confidence.</b></li>
+      <li>In Python it is as easy as deciding to switch from the usual blind writing mode, to an interpreter.</li>
+      <li>In c++ I learned to remove dependencies and work on isolated chunks of code, that I can execute almost immediately, as often as I would like.</li>
+      <li><b>Representation and API</b></li>
+      <li>I make sure to have <b>standard and composable representation and API</b> in every project I’m involved in. </li>
+      <li>This helps everyone in the team understand all structures quickly, and be able to debug each other’s code.</li>
+      <li>Thanks to Python, I now understand the importance of <b>good architecture, and API design</b></li>
+      <li>It is one thing to read a book about it, and another using a good example daily, for a while.</li>
+      <li>I can say the same thing about <b>composability.</b></li>
+      <li>Keeping consistent and composable structures, objects, and modules allows the team to gain fluency in the framework and tools faster.</li>
+      <li>It also keeps our mind free of details that become obvious.</li>
+      <li><b>Prototype in Python</b></li>
+      <li>Even if your production code uses a different language, use Python</li>
+      <li>To prototype properly, you need to think, and it doesn’t work well in most other languages.</li>
+      <li>And if you write Python code, try rewriting, not refactoring. It may work better for you too.</li>
+    </ol>
+  </aside>
 </section>    
 
 <section>
@@ -1115,6 +1637,17 @@
         </p>
       </div>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>What I hope you can take form this talk</li>
+        <li>Try to think about the way you work.</li>
+        <li>Think about the way you think.</li>
+        <li>Try to think in Python.</li>
+        <li>I sometimes find myself having ideas I can write in Python in the same way I thought of it.</li>
+        <li>It doesn’t happen to me with any other computer language.</li>
+        <li>And don’t just think, experiment.</li>
+      </ol>
+    </aside>
   </section>    
 </section>
 
@@ -1127,7 +1660,7 @@
       <img class="plain" src="images/tasks 256.png"></img>
       <img class="plain" src="images/fluency 256.png"></img>
     </div>
-    <div class="fragment">
+    <div>
       <h1 style="font-size: 400%">Thank You</h1>
     </div>
     <div style="font-size: 150%; text-align: left;">
@@ -1136,8 +1669,14 @@
     </div>
     <div class="bitly">
       &nbsp;<br/>
-      <a href="bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
+      <a href="http://bit.ly/ThinkPy" style="font-size:200%">bit.ly/ThinkPy</a>
     </div>
+    <aside class="notes">
+      <ol>
+        <li>And please let me know what you think, doesn’t matter if you only write in Python, or in many other languages. If you're a junior or senior. I would be very happy to hear your opinions, you can find me in the hall, tweet me, or email me.</li>
+        <li>Again, Thank you very much for coming, <b>and for listening.</b></li>
+      </ol>
+    </aside>
   </section>    
 </section>
   
